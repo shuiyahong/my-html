@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空格和换行样式</title>
+    <style>
+    p{
+         width: 300px;
+        height: 200px;
+        border: 1px solid pink;
+    }
+    p:nth-child(1){
+        /*width: 400px;
+        height: 200px;
+        border: 1px solid pink;*/
+        /*  word-break: break-all;暴力强制换行，强行把一个单词拆飞 再换行*/
+        word-break: break-all;
+    }
+    p:nth-child(2){
+        /* word-wrap: break-word;比较不暴力的换行，相对于上面的换行要温和一点*/
+        word-wrap: break-word;
+    }
+    p:nth-child(3){
+        /*white-space: pre;保留文本内容中的空格和换行。*/
+        /*white-space: pre;*/
+        /*white-space: pre-wrap;文字超出就自动换行，相比pre多了一个换行功能*/
+        /*white-space: pre-wrap;*/
+        /*white-space: pre-line;相比较于pre-warp保留换行不保留文本空格，*/
+        white-space: pre-line;
+        /* white-space: nowrap;不换行不保留空格*/
+        /*white-space: nowrap;*/
+    }
+    p:nth-child(4){
+        /*单词与单词之间间距*/
+        word-spacing: 20px;
+        /*字符与字符之间间距*/
+        letter-spacing: 10px;
+
+    }
+    </style>
+</head>
+<body>
+     <p>
+         <!--默认情况下 在一个页面的指定区域，若出现较长的单词或网址url，
+          不在单词内url进行换行，它会让单词URL整体换行或者直接超出区域显示-->
+         你会不会换行啊，不知道开始到底是对是错，无论如何都不能回头
+    这一切的一切越靠近越危险。Hello girl i want you have a happy life ,
+    because i like you like myself. we also have a very nice trip,
+    of couse  with a boy or girl friends.aaaaaaaaaaaaaaaaaaaaaaaaaaaaa www.gogu.com
+    </p>
+   <p>爱爱爱aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+     </p>
+     <p>    
+         function myfunc{
+             var num1=10
+             var num2=20
+             var sum=num1+num2
+              console.log{它们这两个数的和是 '+sum}
+         }
+     </p>
+
+     <p>lang lang agao 你好，我是丫丫 你是哪位？</p>
+</body>
+</html>

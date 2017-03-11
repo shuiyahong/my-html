@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画库</title>
+    <style>
+    section{
+        width: 600px;
+        height: 600px;
+        margin: 0px auto;
+        background-color: black;
+    }
+    span{
+        font-size: 50px;
+        color: red;
+        position: absolute;
+        width: 400px;
+        height: 200px;
+        top: calc(50% - 35px);
+        left: calc(50% - 200px);
+
+        text-align: center;
+
+        /*animation-name: text;
+        animation-duration: 3s;
+        animation-direction:normal;
+        animation-iteration-count: 10;
+
+        transform-origin: 0% 100%; */
+    }
+    @keyframes text{
+        from{
+            transform: rotate(-60deg);
+            opacity: 0;
+        }
+        to{
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+    }
+    </style>
+    <!--引入外部文件-->
+
+     <link rel="stylesheet" href="animate (1).css">
+</head>
+<body>
+    <section>
+        <!--一个标签可以添加多个class名字，之间用空格隔开-->
+        <span class="animated infinite hinge">
+            不许动</span> 
+        <span class="animated flash">
+            yaya你在神魔地方 
+        </span>
+        </section>
+</body>
+</html>

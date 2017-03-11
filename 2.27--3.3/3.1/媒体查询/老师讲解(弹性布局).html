@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body{
+          /*width: 100%;*/
+          margin: 0px;
+    }
+    main{
+           padding: 5px;
+           display: flex;
+           /*换行*/
+           flex-wrap: wrap;
+            
+
+    }
+    img{
+        margin: 5px;
+        /*border: 2px solid blue;*/
+        width: calc((100% - 40px )/ 4);
+    }
+    /*当可显示区域宽度小于等于1000px 显示为3列*/
+    @media screen and (max-width:1000px){
+        img{
+            width: calc((100% - 30px)/3);
+        }
+    }
+
+     @media screen and (max-width:700px){
+        img{
+            width: calc((100% - 20px)/2);
+        }
+    }
+
+     @media screen and (max-width:500px){
+        img{
+            width: calc(100% - 10px);
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <main>
+        <img src="photo/1.jpg" alt="">
+        <img src="photo/2.jpg" alt="">
+        <img src="photo/3.jpg" alt="">
+        <img src="photo/4.jpg" alt="">
+        <img src="photo/5.jpg" alt="">
+        <img src="photo/6.jpg" alt="">
+        <img src="photo/7.jpg" alt="">
+        <img src="photo/8.jpg" alt="">
+        <img src="photo/9.jpg" alt="">
+        <img src="photo/10.jpg" alt="">
+        <img src="photo/11.jpg" alt="">
+        <img src="photo/12.jpg" alt="">
+        <img src="photo/13.jpg" alt="">
+        <img src="photo/14.jpg" alt="">
+        <img src="photo/15.jpg" alt="">
+        <img src="photo/16.jpg" alt="">
+        <img src="photo/17.jpg" alt="">
+        <img src="photo/18.jpg" alt="">
+        <img src="photo/19.jpg" alt="">
+        <img src="photo/20.jpg" alt="">
+    </main>
+    
+</body>
+</html>

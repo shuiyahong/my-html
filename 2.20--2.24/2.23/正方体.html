@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正方体</title>
+    <style>
+   .div div{
+        margin: 0px auto;
+        width: 200px;
+        height: 200px;
+        background-position: 50% 50%;
+
+           opacity:0.5;
+           perspective:20000px; 
+    
+
+    }
+   
+    .one{
+        
+        background-color: pink;
+      transform: translate(200px,200px) rotate(90deg);  
+    }
+    .two{
+        background-color: orangered;
+        transform: rotate(-90deg);
+        transform-origin: bottom;
+
+       
+    }
+    .three{
+        background-color:blueviolet;
+         transform-origin: right;
+         transform-origin: top;
+
+    }
+    .four{
+         background-color: pink;
+         transform: rotate(-90deg);
+         transform-origin: left;
+    }
+
+    .five{
+            background-color: orangered;
+            transform: rotate(-90deg);
+            transform-origin: right;
+
+    }
+    .six{
+            background-color:blueviolet;
+            
+    }
+     
+        </style>
+</head>
+<body>
+<div class="div">   
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  <div class="four"></div>
+  <div class="five"></div>
+  <div class="six"></div> 
+  </div> 
+</body>
+</html>

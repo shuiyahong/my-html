@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+    .header{
+        width: 1000px;
+        height: 100px;
+        /*background-color: red;*/
+        margin: 0px auto 10px;
+    }
+    .content{
+        width: 1000px;
+        height: 600px;
+        /*background-color: cadetblue;*/
+        margin: 0px auto 10px;
+    }
+    .footer{
+        width: 1000px;
+        height: 40px;
+        background-color:plum;
+        margin: 0px auto 10px ;
+    }
+
+     .header .logo{
+        width: 300px;
+        height: 100px;
+        background-color: green;
+        float: left;
+     }
+
+     .header .item{
+        width: 250px;
+        height: 40px;
+        background-color: green;
+        float: right;
+        margin-bottom: 10px;
+     }
+     .header .nav{
+        width: 690px;
+        height: 50px;
+        background-color: lawngreen;
+        float: right;
+     }
+.select{
+    width: 350px;
+    height: 600px;
+    background-color: cyan;
+    margin-right: 10px;
+    float: left;
+}
+.containor{
+    width: 640px;
+    height: 600px;
+    /*background-color: plum;*/
+    float: right;
+}
+.containor .top{
+    width: 640px;
+    height: 500px;
+    /*background-color: hotpink;*/
+    float: right;
+}
+.containor .bottom{
+    width: 640px;
+    height: 90px;
+    /*background-color: hotpink;*/
+    float: right;
+    margin-top: 10px;
+}
+
+.containor .top .left{
+    width: 440px;
+    height: 500px;
+    margin-right: 10px;
+    /*background-color: mediumvioletred;*/
+    float: left;
+}
+.containor .top .left .left1{
+    width: 440px;
+    height: 300px;
+    margin-bottom: 10px;
+    background-color: red;
+    float: left;
+}
+.containor .top .left .left2{
+    width: 440px;
+    height: 90px;
+    margin-bottom: 10px;
+    background-color: red;
+    float: left;
+}
+.containor .top .left .left3{
+    width: 440px;
+    height: 90px;
+    margin-bottom: 10px;
+    background-color: red;
+    float: left;
+}
+.containor .top .right{
+    width: 190px;
+    height: 500px;
+    background-color: yellow;
+    float: right;
+}
+.containor .bottom .down{
+    width: 640px;
+    height: 90px;
+    background-color: hotpink;
+    float: right;
+    /*margin-top: 10px;*/
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+     <div class="logo"></div>
+     <div class="item"></div>
+     <div class="nav"></div>
+
+    </div>
+    <div class="content">
+     <div class ="select"></div>  
+    <div class ="containor">
+   <div class="top">
+       <div class="left">
+           <div class="left1"></div>
+           <div class="left2"></div>
+           <div class="left3"></div>
+       </div>
+       <div class="right"></div>
+   </div>
+   <div class="bottom">
+       <div class="down"></div>
+   </div>
+    </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

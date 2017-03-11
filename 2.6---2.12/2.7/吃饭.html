@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>饿了要吃饭</title>
+    <style>
+html{
+    height: 100%;
+}
+body{
+    height:100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+main{
+    width: 1900px;
+    height: 1000px;
+    background-image:url(9.jpg); 
+    background-size:100% 100%;
+    min-width:1000px;
+    position:relative;
+}
+    #k{
+            width:300px;
+            height:200px; 
+            background-image:url(3.jpg);
+            background-size:100% 100%;
+            position:relative;
+            left:450px;
+            top:700px;
+           
+            }
+    #f{
+            width:300px;
+            height:200px; 
+            background-image:url(33.jpg);
+            background-size:100% 100%;
+            position:absolute;
+            left:950px;
+            top:200px;
+            }
+            div{
+
+           
+            animation-name: rotate;
+            
+            animation-duration: 5s;
+            
+            animation-iteration-count: infinite;
+            
+            animation-timing-function: linear;
+        }
+            @keyframes rotate{
+            0%{
+            
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+</style>
+</head>
+<body>
+    <main>
+        <div id="k"></div>
+        <div id="f"></div>
+    </main>
+</body>
+</html>

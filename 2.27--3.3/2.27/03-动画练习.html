@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画练习</title>
+    <style>
+    main{
+        width: 600px;
+        height: 600px;
+        margin: 50px auto;
+        background-color: black;
+        position: relative;
+    }
+    div{
+        border-radius:50%;
+    }
+    #box{
+        width: 100px;
+        height: 100px;
+        background-color: mediumspringgreen;
+        margin: 0px auto;
+        /*设置旋转变换参考点*/
+        /*以box本身左上角为（0,0），画x y轴*/
+        transform-origin: 50% 300px;
+        /*多个动画用逗号隔开*/
+        animation-name: rotate,changecolor;
+        animation-duration: 5s;
+        animation-iteration-count: 5;
+        animation-direction: reverse;
+
+    }
+    #circle{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        top:calc(50% - 50px/2);
+        left:calc(50% - 50px/2);
+    }
+    /*定义旋转动画*/
+    @keyframes rotate{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    /*改变颜色的动画*/
+        @keyframes changecolor{
+           from{
+               background-color: lightcoral;;
+           }
+           25%{
+               background-color: hotpink;
+           }
+           50%{
+               background-color: seagreen;
+           }
+           75%{
+               background-color: #000;
+           }
+           to{
+               background-color: blue;
+           }
+      }
+    </style>
+</head>
+<body>
+     <main>
+         <div id="box"></div>
+         <div id="circle"></div>
+     </main>
+   
+</body>
+</html>

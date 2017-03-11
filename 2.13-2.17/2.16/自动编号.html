@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动编号</title>
+    <style>
+    div{
+        /*
+        （1）确定要计数的范围  创建一个技术器
+        counter-reset: h2（名称identifier） -1（数字 integer）
+        identifier:计数器名称  自定义
+        integer：指定计数起始值  默认为0 也就是从1开始计数
+        */
+     /*计数器名称*/
+     /*-1表示从0开始计数*/
+          counter-reset: h2 ;
+
+    }
+    h2{
+        /*
+        (2)对要计数的标签 设置计数器的递增 也就是指定增量。
+
+    counter-increment: h2（名称） 1（增量）;
+       identifier:计数器名称  自定义
+       integer：指定每次递增的值 默认1
+    */ 
+    /*表示每次加1*/
+    /*第一步*/
+      counter-increment: h2  1;
+       counter-reset: h3;
+
+    }
+    h2::before{
+
+        /* 
+        (3)获取计数器现在的值，并作为h2的前缀
+        counter（indertifier）： 用来获取计数器现在的值
+        increment：指的是计数器的名称。
+      
+        */
+        content: counter(h2) ".";
+        
+    }
+    h3{
+        /*第二步*/
+        counter-increment: h3  1;
+         /*第一步*/
+        counter-reset: h4;
+    }
+    h3::before{
+        /*第三步*/
+
+         content: counter(h2) "-"counter(h3)" ." ;
+    
+        }
+    h4{
+          /*第二步*/
+         counter-increment: h4  1;
+    }
+    h4::before{
+        content: counter(h2) "-"counter(h3)"-"counter(h4)".";
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>个人简历</h1>
+    <div>
+        <h2>基本信息</h2>
+        <h3>丫丫</h3>
+        <h3>女</h3>
+        <h3>15036509611</h3>
+        <h3>郑州市管城区经开第一大街</h3>
+
+        <h2>专业技能</h2>
+
+         <h3>精通h5</h3>
+          <h4>h5基本结构</h4>
+           <h4>h5常用结构</h4>
+
+            <h3>精通h5css3</h3>
+            <h4>基本结构</h4>
+           <h4>常用结构</h4>
+
+           <h3>精通javascript</h3>
+
+           <h2>求职意向</h2>
+
+           <h2>项目经验</h2>
+
+           <h2>教育经历</h2>
+        
+    </div>
+</body>
+</html>

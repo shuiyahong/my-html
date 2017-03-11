@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="author" content="丫丫">
+        <title></title>
+        <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+        <style>
+            body{
+                margin: 0;
+            }
+            .container-fluid{
+                height: 60px;
+                background-color: plum;
+            }
+            .container{
+                height: 60px;
+                background-color: red;
+                box-sizing: border-box;
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+            @media (max-width:768px){
+                .container{
+                    width: auto;
+                }
+            }
+            @media (min-width:768px){
+                .container{
+                    width: 750px;
+                }
+            }
+
+            @media (min-width:992px){
+                .container{
+                    width: 970px;
+                }
+            }
+            
+            @media (min-width:1200px){
+                .container{
+                    width: 1170px;
+                }
+            }
+          
+        </style>
+    </head>
+    <body>
+       <div class="container"> </div>
+
+        <!--<div class="container-fluid"> </div>-->
+        <!--.container这个类的实现原理，媒体查询+定宽居中-->
+
+        <!--<script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>-->
+    </body>
+</html>

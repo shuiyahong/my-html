@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询的使用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum=1.0,user-scalable=no"> 
+    <style>
+    body{
+        height: 100vh;
+        /*width: 100vw;*/
+        margin: 0px;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        margin: 20px auto;
+    }
+    /*width/height:指的是可显示区域的宽高*/
+    @media screen and (min-width:400px){
+        body{
+            background-color: tomato;
+        }
+    }
+
+    @media screen and (min-height:800px){
+        div{
+            margin: 40px auto;
+            background-color: plum;
+        }
+    }
+    /*device-width/device-height：设备背景宽高*/
+    @media (device-width:320px) and (device-height:480px){
+        body{
+            background-color: green;
+        }
+    }
+    /*aspect-ratio:显示区域的宽高比*/
+    @media screen and (max-aspect-ratio:3/4){
+        div{
+            background-color: lightblue;
+        }
+    }
+    /*orientation:(屏幕的横屏landscape和竖屏portrait)*/
+    @media screen and (orientation:landscape){
+        div{
+            width: 300px;
+        
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div></div>
+</body>
+</html>

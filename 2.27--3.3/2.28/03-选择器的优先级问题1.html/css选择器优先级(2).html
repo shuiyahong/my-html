@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器的优先级（2）</title>
+    <style>
+/*结论：如果多个选择器都能直接定位到某元素
+那么权值越大，优先级越高
+如果权值相等的情况下 那么就按照代码顺序执行以最后代码样式为准*/
+
+    /*权值是111*/
+    .box #content p{
+        color: orangered;
+    }
+    /*权值是101*/
+    #content p{
+        color: purple;
+    }
+      /*权值是111*/
+    .container #content p{
+        color: violet;
+    }
+
+  
+    </style>
+</head>
+<body>
+     <div class="box">
+         <div class="container">
+         <div id="content">
+             <p>权重问题</p>
+        </div>
+        </div>
+     </div>
+   
+</body>
+</html>

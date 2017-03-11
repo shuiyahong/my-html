@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景图片的定位</title>
+    <style>
+    div{
+        width: 450px;
+        height: 450px;
+        border:1px solid palegoldenrod;
+        background-image: url(6.jpg);
+        background-repeat: no-repeat;
+        /*
+        1.赋值方式：（1）绝对值(定位参考点为 盒子本身)
+                    （2）百分比（参考点位图片本身）
+                    （3）left/right/top/bottom/center
+        2.如果后面值附一个值，该值表示水平方向的定位。
+        第二个值竖直方向上默认为50%（center）
+
+        3. 定位的参考点 盒子本身。
+        */
+        background-position: 10% 10%;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

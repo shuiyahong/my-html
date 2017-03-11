@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="丫丫">
+    <title>艾米尼</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="爱迷尼.css">
+</head>
+
+<body>
+    <!--导航条-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="content">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+               </button>
+            <a class="navbar-brand" href="#">爱迷尼儿童摄影</a>
+            <div class="collapse navbar-collapse navbar-left">
+                <ul class="nav navbar-nav" id="p1">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">客户</a></li>
+                    <li><a href="#">宝贝</a></li>
+                    <li><a href="#">孕妈咪</a></li>
+                    <li><a href="#">会员卡</a></li>
+                    <li><a href="#">订单</a></li>
+                    <li><a href="#">预约</a></li>
+                    <li><a href="#">数据</a></li>
+                    <li><a href="#" style="margin-right:200px;">产品</a></li>
+                </ul>
+            </div>
+            <div class="btn-group nav navbar-nav">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    常伟<span class="caret"></span>
+  </button>
+                <ul class="dropdown-menu" style="background-color: white">
+                    <li><a href="#">常伟</a></li>
+                    <li><a href="#">李应旭</a></li>
+                    <li><a href="#">王晓玉</a></li>
+                    <li><a href="#">水亚红</a></li>
+                </ul>
+                <button type="button" class="btn btn-default">退出</button>
+            </div>
+        </div>
+    </nav>
+    <div class="main" style="margin-top:50px;background-color: lightgray">
+        <h2>客户查询及管理</h2>
+    </div>
+    <!--模态框-->
+    <!-- 添加客户 -->
+   
+        <button type="button" class="btn btn-primary" id="per" data-toggle="modal" data-target=".bs-example-modal-sm">添加客户</button>
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content-one">
+                    <div class="choose">
+                        
+                       <h3>添加客户</h3>
+                       <hr style="border:1.5px dashed gray">
+
+                        <label for="fond">添加时间:</label>
+                        <input type="text" id="fond" placeholder="添加时间" required="required"><br/><br/>
+
+                        <label for="fond">姓名:</label>
+                        <input type="text" id="fond" placeholder="姓名"  required="required"><br/><br/>
+
+                         <label for="fond">性别:</label>
+                        <input type="text" id="fond" placeholder="性别"  required="required"><br/><br/>
+
+                         <label for="fond">QQ:</label>
+                        <input type="text" id="fond" placeholder="QQ" required="required"><br/><br/>
+
+                         <label for="fond">手机:</label>
+                        <input type="text" id="fond" placeholder="手机"  required="required"><br/><br/>
+
+                         <label for="fond">电话:</label>
+                        <input type="text" id="fond" placeholder="电话"  required="required"><br/><br/>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--搜索-->
+        <button type="button" class="btn btn-primary" id="sea" data-toggle="modal" data-target=".bs-example-modal-sm">
+           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;搜索</button>
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content-two">
+                    <div class="search">
+                        
+                       <h3>搜索条件</h3>
+                       <hr style="border:1.5px dashed gray">
+
+                        <label for="fond">姓名:</label>
+                        <input type="text" id="input" placeholder="客户姓名" required="required"><br/><br/>
+
+                        <label for="fond">QQ:</label>
+                        <input type="text" id="input" placeholder="QQ号"  required="required"><br/><br/>
+
+
+                         <label for="fond">手机:</label>
+                        <input type="text" id="input" placeholder="手机号"  required="required"><br/><br/>
+
+                         <label for="fond">固话:</label>
+                        <input type="text" id="input" placeholder="固话" required="required"><br/><br/>
+
+                         <label for="fond">身份证:</label>
+                        <input type="text" id="input" placeholder="身份证号"  required="required"><br/><br/>
+
+                         <label for="fond">客户经理:</label>
+                        <input type="text" id="input" placeholder="客户经理姓名"  required="required"><br/><br/>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+ <div class="contentbox">
+        <div class="table">
+            <table>
+                <tr style="background-color: lightgray">
+                    <th>添加时间</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>QQ</th>
+                    <th>手机</th>
+                    <th>电话</th>
+                    <th>客户经理</th>
+                    <th>详情</th>
+                </tr>
+
+                <tr>
+                    <td>2016-02-14</td>
+                    <td>李应许</td>
+                    <td>女士</td>
+                    <td>123456789</td>
+                    <td>15036214879</td>
+                    <td>300320018</td>
+                    <td>小瑞</td>
+                    <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+                </tr>
+                <tr>
+                    <td>2017-02-14</td>
+                    <td>常伟</td>
+                    <td>先生</td>
+                    <td>123456789</td>
+                    <td>15036214879</td>
+                    <td>300320018</td>
+                    <td>小瑞</td>
+                    <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></td>
+         </tr>
+          <tr>
+             <td>2017-03-06</td>
+             <td>王小雨</td>
+             <td>女士</td>
+             <td>123456789</td>
+             <td>15036214879</td>
+             <td>300320018</td>
+             <td>小瑞</td>
+             <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></td>
+         </tr>
+
+        </table>
+    </div>
+    <p style="color: grey;font-size: 18px;">共3个客户</p>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

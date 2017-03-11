@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图形转换</title>
+    <style>
+    html{
+        height: 100%;
+
+    }
+    body{
+        margin: 0px;
+        height: 100%;
+        background-color: plum;
+    
+    }
+      body>section{
+        width: 300px;
+        height: 300px;
+        background-color: deeppink;
+        margin: 100px auto;
+    }
+     body>section>section{
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        /*平移translate(x,y)*/
+        transform: translate(100px,100px);
+        /*transform-origin: 50%, 0;
+        transform:rotate(45deg);*/
+       
+    }
+     body>section>section>section{
+        width: 300px;
+        height: 300px;
+        background-color: lightcoral;
+        /*缩放*/
+        /*transform: scale(0.5);*/
+
+         /*origin：起点 原点.给转换设置参考点*/
+         /*transform-origin:设置变换的参考点*/
+           /*transform-origin: 0% 0%;*/
+         /*旋转rotate(45deg)默认以自己（该盒子）为中心点旋转*/
+        /*transform: scale(0.5) rotate(45deg);*/
+         /*width: 200px;
+           height: 200px;*/
+           /*skew:倾斜*/
+           /*第一个值：向x轴方向倾斜角度。
+           第二个值：向y轴方向倾斜角度*/
+          transform: scale(0.5) skew(0deg,135deg);
+
+    }
+
+    </style>
+</head>
+<body>
+    <!--
+     transform:转换 转变。
+     通过transform
+    在平面坐标系下，基于x轴y轴 对图形进行：
+    平移（translste）
+    缩放（scale）
+    旋转 （rotate）
+    倾斜（skew）-->
+    <section>
+        <section>
+            <section></section>
+        </section>
+    </section>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css过渡效果6</title>
+    <style>
+        /*
+        实现过渡效果必须有两个前提：
+        （1）必须指定好开始状态，结束状态。
+        （2）必须有一个事件去触发它。
+        */
+        
+        section {
+            /*开始状态*/
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: red;
+            /*（3）定义过渡效果
+           实现过渡效果的属性：transition
+        
+            /*设置要实现过渡效果的样式属性*/
+            transition-property: width, height;
+            /*设置过渡时间,以秒为单位*/
+            transition-duration: 3s;
+           /*设置过渡的贝塞尔曲线（实际指的是速度曲线）*/
+            /*ease:缓慢 
+            ease-in:开始的时候慢 加速
+            ease-out:缓慢的结束 减速
+            ease-in-out:先加速后减速
+            liner:匀速
+            cubic-bezier(,,,)
+            http://cubic-bezier.com
+            */
+            transition-timing-function: cubic-bezier(.12,.81,.93,.3);
+            /*transition-timing-function: ease-in-out;*/
+            
+            /*设置过渡的延迟时间。delay:延迟。*/
+            transition-delay:2s; 
+
+            /*简写形式，综合起来写*/
+            /*transition: property, duration, animation-timing-function, delay */
+            /*注意：并不是所有的过度标签都可以实现过渡效果http://www.css88.com/book/css/properties/transition/transition-property.htm*/
+            transition: all 2s liner 2s;
+        }
+        /*（2）事件hover*/
+        section:hover {
+            /*最终状态*/
+            width: 300px;
+            height: 300px;
+            background-color: plum;
+           
+            
+        }
+        
+        section:active {
+            transform: rotate(250deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section></section>
+
+</body>
+
+</html>

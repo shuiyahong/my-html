@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动4</title>
+ <style>
+   li{
+       float: left;
+       list-style: none;
+   }
+   /*若遇到多个内容需要浮动，
+   可根据需要给其加id、class
+   在进行修饰overflow：hidden*/
+   .clear{
+       overflow: hidden;
+   }
+   </style>
+</head>
+
+<body>
+    <div id="box1">
+        <!--使用overflow:hidden.清除浮动-->
+        <!--<ul style="overflow: hidden">-->
+            <ul class="clear">
+            <li>男嘉宾1</li>
+            <li>男嘉宾2</li>
+            <li>男嘉宾3</li>
+            <li>男嘉宾4</li>
+            <li>男嘉宾5</li>
+        </ul>
+       </div>
+    <div id="box2">
+        <!--<ul style="overflow: hidden">-->
+            <ul class="clear">
+            <li>女嘉宾1</li>
+            <li>女嘉宾2</li>
+            <li>女嘉宾3</li>
+            <li>女嘉宾4</li>
+            <li>女嘉宾5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

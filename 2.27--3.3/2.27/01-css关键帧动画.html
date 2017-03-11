@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--关键帧：利用一张张静态照片，使其快速播放形成动画效果。-->
+    <title>css3关键帧动画</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            height: 100%;
+            margin: 0px;
+            background-color: black;
+            position: relative;
+        }
+        
+        div{
+            width: 200px;
+            height: 200px;
+            
+            background-color: palevioletred;
+            position: absolute;
+       
+           
+            /*animation-name: 指定让div执行rotate动画*/
+            animation-name: rotate;
+            /*animation-duration:指定动画所持续的时间*/
+            animation-duration: 4s;
+            /*animation-timing-function:动画的缓动函数*/
+            animation-timing-function: linear;
+            /*动画延迟时间*/
+            animation-delay: 2s;
+            /*iteration: 迭代，重复 count：次数
+            animation-iteration-count: 指定动画重复次数*/
+            animation-iteration-count: infinite;
+            /*指定动画方向
+            normal：正常
+            reverse:反向
+            alternate：一正一反
+            alternates-reverse:先反向再正向*/
+            animation-direction:reverse； 
+        }
+        /*@keyfames:关键帧,用来定义动画的关键字
+        指定动画名称：rotate
+        {}中指明整个动画的关键点
+        */
+        @keyframes rotate{
+             /*from：从，表示动画的开始状态  等同于0%*/
+            from{
+                top:0px;
+                left:0px;
+               
+            }
+            /*右上角*/
+            25%{
+                  top:0px;
+                  left:calc(100% - 200px); 
+            }
+            /*右下角*/
+            50%{
+                top:calc(100% - 200px); 
+                left:calc(100% - 200px); 
+            }
+            /*左下角*/
+            75%{
+                top: calc(100% - 200px); 
+                left: 0px;
+               
+            }
+            /*表示动画结束状态  等同于100%*/
+            to{
+                 top:0px;
+                 left:0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

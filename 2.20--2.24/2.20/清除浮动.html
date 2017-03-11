@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动1</title>
+    <style>
+    ul{
+        /*overflow: none;*/
+        height: 100px;
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    /*.man li{
+       float: left;
+    }
+    .woman li{
+       float: left;
+    }*/
+
+    /*（1）如果元素浮之后，他所在的父元素的height会变为0。
+      （2）解决的方式：直接给父元素加高度。
+      （3）但是，不建议使用这种方式，因为一般盒子的高度都是由内容撑起来的。
+    */
+    li{
+        float: left;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box1">   
+    <ul class ="man">
+        <li>男嘉宾1</li>
+        <li>男嘉宾2</li>
+        <li>男嘉宾3</li>
+        <li>男嘉宾4</li>
+        <li>男嘉宾5</li>
+    </ul>
+    </div>
+
+      <div class="box2">   
+    <ul class ="woman">
+        <li>女嘉宾1</li>
+        <li>女嘉宾2</li>
+        <li>女嘉宾3</li>
+        <li>女嘉宾4</li>
+        <li>女嘉宾5</li>
+    </ul>
+    </div>
+</body>
+</html>

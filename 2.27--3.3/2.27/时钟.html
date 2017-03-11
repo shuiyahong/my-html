@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+    #main{
+        width: 500px;
+        height: 500px;
+        margin: 0px auto;
+        border: 1px solid plum;
+        position: relative;
+       
+        background-image: url(clock.jpg);
+        background-size: 500px 500px;
+        background-repeat: no-repeat;
+    }
+ 
+    #hour{
+
+        
+         width: 60px;
+         height: 2px;
+         background-color: red;
+         position: absolute;
+         top: 250px;
+         left:250px;
+
+         animation-name: hours;
+         animation-duration: 21600s;
+          animation-timing-function: linear;
+        animation-iteration-count:infinite;
+
+          transform-origin: 0 100%;
+       
+    }
+    #minute{
+        width: 90px;
+        height: 2px;
+        background-color: blue;
+        position: absolute;
+        top: 250px;
+        left:250px;
+        animation-duration: 3600s;
+
+        animation-name: minutes;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+
+        transform-origin: 0 100%;
+    }         
+    #second{
+        width: 120px;
+        height: 2px;
+        background-color: gray;
+        position: absolute;
+        top: 250px;
+        left:250px;
+
+         animation-name:seconds;
+         animation-duration: 60s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+
+        transform-origin: 0 100%;
+    }
+    @keyframes hours{
+        0%{
+            transform: rotate(-360deg);
+            opacity: 0.5;
+        }
+        100%{
+             transform: rotate(0deg);
+             opacity: 0.5;
+
+        }
+    }
+
+     @keyframes minutes{
+        0%{
+            transform: rotate(-360deg);
+             /*opacity: 0.5;*/
+           
+        }
+        100%{
+            transform: rotate(0deg);
+            /*opacity: 0.5;*/
+        }
+    }
+
+    @keyframes seconds{
+        0%{
+           transform: rotate(-360deg);
+             /*opacity: 0.5;*/
+        }
+        100%{
+            transform: rotate(0deg);
+            /*opacity: 0.5;*/
+        }
+    } 
+    </style>
+</head>
+
+<body>
+    <div id="main">
+       <div id="hour"></div>
+       <div id="minute"></div>
+       <div id="second"></div>
+     </div>
+</body>
+
+</html>

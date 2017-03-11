@@ -1,0 +1,181 @@
+html{
+    font-size: 16px;
+}
+
+body,h2,h3,p,ul{
+    padding: 0px;
+    margin: 0px;
+}
+ul{
+    list-style: none;
+}
+/*1.导航条*/
+.mynav{
+     background-image: url(nav-bg.png);
+     /*设置导航条背景图片沿着x轴平铺*/
+     background-repeat: repeat-x;
+}
+/*去掉表示logo的 a 的内边距*/
+.navbar-brand{
+    padding: 0px;
+}
+
+/*调整logo与item之间的间隔*/
+#mynavbar-collapse-1{
+      margin-left:50px;
+}
+/*调整nav-items的下内边距*/
+#mynavbar-collapse-1 ul li a{
+    
+    padding: 15px 5px 10px;
+    margin-right: 20px;
+}
+/*鼠标悬停a时，显示下边框线*/
+#mynavbar-collapse-1 ul li a:hover{
+     border-bottom: 2px solid blue;
+}
+/*调整输入框的圆角*/
+ .navbar-form .form-group .form-control{
+    border-radius: 17px;
+}
+
+/*2.banner 区域*/
+.banner{
+    margin-top: 50px;
+    height: 400px;
+    background-image: url(banner.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*3.内容区域*/
+.content-box {
+     margin-top: -30px;
+     margin-bottom: 60px;
+}
+.content-box>div{
+      height: 240px;
+}
+.content-box>div>h2{
+      height: 30px;
+      background-image:url(s-bg1.png);
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+      font-size: 1rem;
+      color: white;
+      line-height: 30px;
+      padding-left: 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+   
+}
+/*标题下的 内容样式*/
+.content-box .content{
+    border:1px solid gray;
+    padding: 10px;
+    height: 210px;
+}
+/*公司动态中的具体样式*/
+.content section{
+    float: right;
+    width:calc(100% - 95px);
+}
+.content h3{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.content p{
+    font-size: 0.7rem;
+}
+.content .more{
+     font-size: 0.7rem;
+     display: block;
+     text-align: right;
+}
+.content .top{
+    /*清除浮动*/
+    overflow: hidden;
+    padding-bottom:5px;
+    border-bottom:1px dotted gray;
+}
+.content .bottom ul li a{
+    float: left;
+    color: #333;
+}
+.content .bottom ul li span{
+    float:right;  
+}
+/*清除浮动*/
+.content .bottom ul li {
+  overflow: hidden;
+}
+.content .bottom{
+    padding-top: 10px;
+}
+/*重新设置 .idea 中的h2 背景图*/
+.content-box .idea>h2{
+      background-image: url(s-bg2.png);
+}
+/*产品与服务中的内容样式*/
+.servse .content img{
+    width: 100%;
+    height: 80px;
+}
+.servse .content .options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.servse .content .options a{
+    width: 45%;
+    background-color: gainsboro;
+    margin: 10px 0px;
+    line-height: 2.5rem;
+    color: black;
+    text-align: center;
+}
+/*footer 页脚*/
+footer{
+    line-height: 50px;
+}
+footer ul li{
+    margin-left: 20px;
+}
+@media screen and (min-width:1600px) and (max-width:1920px){
+    .banner{
+        height: 480px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .banner{
+        background-position: 30% 50%;  
+    }
+}
+
+@media screen and (max-width:992px){
+    .banner{
+        height:300px;  
+    }
+    /*调整区域内的三个div 之间的上下间隔*/
+    .content-box>div{
+        margin-bottom: 10px;
+    }
+   footer .container .navbar-left{
+        float: none !important;
+        text-align: center;
+   }
+    footer .container .navbar-right{
+        float: none !important;
+        display: flex;
+        justify-content: center
+   }
+}
+
+/*当屏幕小于768px时，去掉a 的下边框线*/
+@media screen and (max-width:768px){
+  #mynavbar-collapse-1 ul li a:hover{
+     border-bottom: none;
+ }  
+}

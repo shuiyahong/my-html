@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转木马</title>
+    <style>
+    html{
+        height: 100%;
+    }
+    body{
+        margin: 300px;
+        height: 100px;
+        /*position: relative;*/
+        perspective: 1000px;
+        
+    }
+    section{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: calc(50% - 150px);
+        left: calc(50% - 150px);
+         border: 1px solid plum;
+
+        transform-style: preserve-3d;
+         animation-name: rotate;
+         animation-duration: 6s;
+         animation-timing-function: linear;
+         animation-iteration-count: infinite;
+       
+        
+        perspective-origin: 50% -50%;
+
+    }
+    div{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+    }
+    div:nth-child(1){
+        background-image: url(img/1.jpg);
+        transform: rotateY(0deg) translateZ(300px);
+    }
+     div:nth-child(2){
+        background-image: url(img/2.jpg);
+         transform: rotateY(60deg) translateZ(300px);
+    }
+     div:nth-child(3){
+        background-image: url(img/7.jpg);
+         transform: rotateY(120deg) translateZ(300px);
+    }
+     div:nth-child(4){
+        background-image: url(img/4.jpg);
+         transform: rotateY(180deg) translateZ(300px);
+    }
+     div:nth-child(5){
+        background-image: url(img/5.jpg);
+         transform: rotateY(240deg) translateZ(300px);
+    }
+     div:nth-child(6){
+        background-image: url(img/6.jpg);
+         transform: rotateY(300deg) translateZ(300px);
+    }
+    @keyframes rotate{
+        0%{
+           transform: rotateY(0deg);
+        }
+        100%{
+            transform: rotateY(360deg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

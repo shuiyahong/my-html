@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+    #container{
+           width: 400px;
+           height: 400px;
+           border: 5px dotted palevioletred;
+
+           /*上下20px 左右自动*/
+           margin: 20px auto;
+            /*子绝父相*/
+           position: relative;
+           /*为了让container作为span定位的参考点
+           并不是想让div进行未知的调整*/
+          
+
+    }
+    span:nth-child(2){
+        color:brown;
+        position: absolute;
+        /*span 距离div的右侧0px*/
+        right:0px;
+        top: 0px;
+
+
+
+    }
+    span:nth-child(3){
+        color: purple;
+         position: absolute;
+         right:0px;
+         bottom: 0px;
+        
+    }
+    span:nth-child(4){
+        color: hotpink;
+         position: absolute;
+         left:0px;
+         bottom:0px;
+        
+    }
+    /*span:nth-child(5){
+        color: red;
+         position: absolute;
+        right:200px;
+        top: 200px;
+        
+    }*/
+    #innerbox{
+        width: 100px;
+        height: 100px;
+        background-color: deepskyblue;
+        position: absolute;
+        /*(大div的高度 - 小 div的高度)/2*/
+        right:150px;
+        /*(大div的高度 - 小 div的高度)/2*/
+        top: 150px;
+        /*margin-top:150px;
+        margin-left:150px;*/
+        /*margin: 150px;*/
+    }
+    </style>
+</head>
+<body>
+    <div id = "container">
+     <span>我在北京</span>
+     <span>我在上海</span>
+     <span>我在郑州</span>
+     <span>我在三峡</span>
+     <!--<span>我在中国</span>-->
+     <div id="innerbox">
+
+
+     </div>
+     
+
+    </div>
+</body>
+</html>

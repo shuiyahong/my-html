@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动3（隔墙法）</title>
+   <style>
+   li{
+       float: left;
+       list-style: none;
+   }
+   
+   </style>
+</head>
+
+<body>
+    <div id="box1">
+        <ul>
+            <li>男嘉宾1</li>
+            <li>男嘉宾2</li>
+            <li>男嘉宾3</li>
+            <li>男嘉宾4</li>
+            <li>男嘉宾5</li>
+        </ul>
+        <!--内墙法-->
+        <!--<div style="clear: left"></div>-->
+    </div>
+    <!--外墙法-->
+    <div style="clear: both"></div>
+    <div id="box2">
+        <ul>
+            <li>女嘉宾1</li>
+            <li>女嘉宾2</li>
+            <li>女嘉宾3</li>
+            <li>女嘉宾4</li>
+            <li>女嘉宾5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

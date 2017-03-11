@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转动的梦想</title>
+    <style>
+    html{
+        height:100%;
+    }
+    body{
+        height:100%;
+        /*弹性布局*/
+        /*设置body为弹性盒子*/
+        display: flex;
+        /*设置body中的子元素，在垂直方向上居于body的底部*/
+        align-items: flex-end;
+        /*设置body中的子元素，在水平方向上居中*/
+        justify-content: center;
+        /*把超出body的内容区域隐藏掉*/
+        /*hidden:隐藏*/
+        overflow: hidden;
+
+    }
+    main{
+            width:1300px;
+            height:500px;
+            /*设置背景图*/
+            background-image:url(caodi.png);
+            /*设置背景图片的宽高*/
+            background-size: 100% 100%;
+            /*最小宽度*/
+            min-width:1300px;
+            /*让风车相对于main这个盒子做定位*/
+            position:relative;
+            /*relative:相对定位个*/
+            
+        }
+        /*id选择器*/
+    #frist{
+            width:300px;
+            height:300px; 
+            background-image: url(fengche.png);
+            background-size: 100% 100%;
+            /*绝对路径*/
+            position:absolute;
+            /*让div相对于main的左侧 向右移动*/
+            left:290px;
+            /*让div相对于main的上部 向下移动*/
+            top: 80px;
+
+            }
+    #second{
+            width:200px;
+            height:200px;
+            background-image: url(fengche.png);
+            background-size: 100% 100%;
+            position:absolute;
+            left:755px;
+            top:222px;
+    }
+    #third{
+            width:150px;
+            height:150px;
+            background-image:url(fengche.png);
+            background-size: 100% 100%;
+            position:absolute;
+            left:590px;
+            top:285px;
+            }
+
+div{
+
+            /*动画名称*/
+            animation-name: rotate;
+            /*动画时间,以秒为单位*/
+            animation-duration: 2s;
+            /*定义动画重复次数,infinite:无数次*/
+            animation-iteration-count: infinite;
+            /*定义动画速度曲线,linear:匀速*/
+            animation-timing-function: linear;
+        }
+        /*@keyframes 动画名{ }: 定义一个关键帧动画*/
+        @keyframes rotate{
+            0%{
+                /*transform:转换,转变*/
+                /*rotate: 旋转,角度的改变*/
+                /*deg: 角度单位*/
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--main:主要的 此处用来表示风车-->
+    <main>
+        <!--div表示风车-->
+        <div id="frist"></div>
+           <div id="second"></div>
+               <div id="third"></div>
+    </main>
+</body>
+</html>

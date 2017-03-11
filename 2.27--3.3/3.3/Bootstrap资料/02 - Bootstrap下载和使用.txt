@@ -1,0 +1,20 @@
+﻿1.Bootstrap中文网
+http://www.bootcss.com/
+在首页导航栏找到 "bootstrap3中文文档" 并点击，然后在"Bootstrap 中文文档" 
+页面中找到 "下载Bootstrap" 点击，下载“用于生产环境的Bootstrap”
+
+2.下载jQuery
+http://jquery.com
+在首页找到 "Download jQuery" 并点击，然后在新的页面找到
+"Download the compressed, production jQuery 3.1.0"
+压缩去格式版，代码经过特殊处理，适合在项目中使用
+"Download the uncompressed, development jQuery 3.1.0" 
+没有进行处理的原代码,适合于人们阅读与研究
+点击下载即可，两种jQuery文档作用相同
+
+3.将下载好的Bootstrap 解压，并把下载的jQuery.js 放入 Bootstrap 的
+ js 文件夹中，方便我们以后使用
+
+
+
+

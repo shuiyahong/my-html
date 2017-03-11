@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+    body{
+        margin:0px;
+    }
+    div{
+      height: 60px;
+      background-color: plum;
+
+      /*固定定位*/
+      /*固定定位的参考物是浏览器窗口*/
+      position: fixed;
+      top:0px;
+
+      width: 100%;
+
+
+    }
+    main{
+      height: 5000px;
+      width:1200px;
+      margin:60px auto 0px;
+       background-color:lightblue;
+       
+    }
+    a{
+        font-size: 30px;
+        color: red;
+        background-color: cornflowerblue;
+        /*设置文本是否添加线条*/
+        text-decoration: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div id = "nav">导航条</div>
+    <main>主要内容</main>
+<a href="#">丫丫</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对单位</title>
+    <style>
+    #p1{
+        font-size: 2em;
+    }
+    /*em：他是一个相对单位。相对于计算绝对值时，是相对于父标签进行计算大小
+    如果父标签也是相对单位，那就先是倍数的叠加，然后继续往上层找绝对值
+    
+      */
+    #p1 span{
+        font-size: 1.5em;
+    }
+    #box1{
+        width: 10em;
+        height: 10px;
+        background-color: cadetblue;
+    }
+    section{
+        width: 8em;
+        height: 20px;
+        background-color: fuchsia;
+    }
+body{
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+    <!--em: 他是一个相对单位，使用它设置文字或盒子大小时，要根据父元素的font-size决定大小
+    如果父元素font-size 不是一个绝对数，那么逐层往上找，并且一次相乘，直到找到一个绝对值，计算出其最终结果-->
+    我是body的文本内容
+    <P id = "p1">第一段内容<span>p中的span</span></P>
+<div id = "box1"><section></section></div>
+
+<!--rem：是相对根标签（html）的font-size值。-->
+<!--（root：根）-->
+<p id = "p2" style="font-size: 2rem">第二段内容
+    <!--1.5*16=24px-->
+    <span style="font-size: 1.5rem">你猜我多大</span></p>
+<main style="padding:2rem;background-color: pink"></main>
+
+</body>
+</html>

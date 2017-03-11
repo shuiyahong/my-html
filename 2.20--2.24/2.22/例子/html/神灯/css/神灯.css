@@ -1,0 +1,258 @@
+/*并集选择器*/
+body,p,ul,figure{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    /*去除文本前的点（前缀）*/
+    list-style: none;
+}
+a{
+    /*去除下划线*/
+    text-decoration: none;
+    color: black;
+}
+body{
+    /*避免出现水平滚动条*/
+     overflow-x: hidden;
+}
+/*选择到所有标签（不推荐使用）*/
+
+/**{
+    line-height: 0px;
+}*/
+/*img{
+    line-height: 0px;
+}*/
+/*1.头部*/
+header div{
+     /*定宽居中*/
+     width:1000px;
+     margin: 0px auto;
+      line-height: 0px;
+     /*background-color: plum;*/
+}
+header div #tel{
+    float: right;
+    margin: 19.5px 0px;
+
+    
+}
+/*2.导航条*/
+nav ul{
+    /*定宽居中*/
+    width: 1000px;
+    margin: 0px auto;
+    /*line-height: 10px;*/
+}
+nav{
+    line-height: 50px;
+    background-color: red;
+}
+/*清除浮动*/
+nav ul::after{
+    display: block;
+    content: " ";
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+nav ul li{
+      float: left;
+      width: 90px;
+      /*margin-right: 10px;*/
+      /*background-color: white;*/   
+}
+nav ul li:nth-child(6){
+    margin-right: 20px;
+}
+nav ul li:nth-child(2){
+    margin-left: -20px;
+}
+nav ul li:nth-child(5){
+    margin-left: 10px;
+}
+nav ul li a{
+    color: white;
+}
+/*伪类选择器*/
+/*鼠标悬停时的样式*/
+nav ul li a:hover{
+    background-color: white;
+    color: red;
+
+    padding: 5px 5px 17px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /*background-image: url(css/nav_bg.jpg)*/
+}
+/*（3）广告图*/
+ .banner{
+     width: 100%;
+     line-height: 0px;
+}
+.banner img{
+    width: 100%;
+}
+/*(4)主要内容*/
+main{
+    background-color: #F6F6F6;
+}
+main .containor{
+    /*定宽居中*/
+    /*height: 300px;*/
+    width: 1000px;
+    margin: 5px auto 0px;
+    /*background-color: #F6F6F6;*/
+}
+/*(4.1)main-top*/
+/*4.1.1 left-nav*/
+.containor .main-top .left-nav{
+    width: 210px;
+    float: left;
+}
+.left-nav .plist ul li{
+    /*文本右对齐*/
+    text-align: right;
+    line-height: 30px;
+   font-size: 16px;
+} 
+/*联系我们*/
+.header-bg{
+    background-image: url(../bg.jpg);
+    /*background-size:100% 100%; */
+    line-height:40px;
+    margin-top: 10px;
+
+    padding-left: 40px;
+    background-repeat: no-repeat;
+}
+.left-nav .contact img{
+    margin: 10px 0px 15px;
+}
+.left-nav .contact adress{
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+/*4.1.2 :right-pro*/
+.containor .main-top .right-pro{
+    width: 780px;
+    float: right;
+}
+.more{
+    float: right;
+    height: 15px;
+    font-size: 12px;
+    color: cornflowerblue;
+    padding: 10px 10px 0px;
+    box-sizing: border-box;
+}
+.right-pro .pro-pic figure{
+    float: left;
+    margin: 10px;
+
+    padding: 8px;
+    background-color: whitesmoke;
+}
+.right-pro .pro-pic{
+    margin: 10px;
+
+}
+.right-pro .pro-pic figure figcaption{
+    text-align: center;
+    line-height: 30px;
+}
+/*清除浮动*/
+.clear{
+    clear: both;
+
+}
+/*(4.2)main-bottom*/
+/*left-company公司简介*/
+ .main-bottom .left-company{
+    
+        width: 640px;
+        float: left;
+
+}
+.main-bottom .left-company img{
+    margin: 0px;
+    float: left;
+    overflow: hidden;
+}
+.main-bottom .left-company p{
+    font-size: 14px;
+    line-height: 20px;
+    text-indent: 2em;
+}
+ /*新闻列表*/
+.main-bottom .right-news{
+    width: 350px;
+    float: right;
+}
+.right-news ul{
+    margin-top: 10px;
+   
+}
+.right-news ul li{
+    
+    line-height: 30px;
+    font-size: 14px;
+    /*height: 28px;*/
+    /*清除浮动*/
+    overflow: hidden;
+    padding-left: 10px;
+}
+.right-news ul li a{
+    float: left;
+}
+.right-news ul li span{
+    float: right;
+}
+/*5.友情链接*/
+.friend-link{
+    line-height: 50px;
+    font-size: 14px;
+    /*定宽居中*/
+    width: 1000px;
+    margin: 0 auto;
+}
+.friend-link a{
+    margin-right: 30px;
+
+}
+.friend-link a:nth-child(1){
+    font-size: 18px;
+}
+/*鼠标悬停*/
+/*属性选择器*/
+.friend-link a[href="#"]:hover{
+    /*添加下划线*/
+    text-decoration: underline;
+}
+/*页脚*/
+footer{
+    background-color: red;
+}
+.foot{
+    width: 600px;
+    margin: 0 auto;
+
+}
+.foot p{
+    font-size: 13px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+/*
+总结：
+（1）页面结构划分
+（2）布局方式 主要用了浮动和定宽居中
+（3）line-height的使用。让文字在这一行上竖直方向上居中，尽量不去设置盒子的高度。
+（4）<div style="line-height:0"><img src=""><div>
+<p>yeyuirfhdbf</p>
+去掉img底部产生的空白
+*/

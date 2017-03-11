@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js操作dom简介</title>
+    <style>
+    div{
+        width:200px;
+        height:200px;
+        border:10px solid pink;
+    }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    
+
+  <script>
+    //   查找dom标签,获取html中的标签对
+    // 根据id找到标签对
+    var div = document.getElementById("box")
+     console.log(div)
+    //  操作div这个标签内容
+      div.innerText ='hellow word  今天郁闷了'
+      div.style.color='blue'
+      div.style.fontsize ='30px'
+      
+    // 通过js创建标签
+     var img = document.createElement("img")
+    //  给img标签的src属性赋值
+     img.src="10.jpg"
+    //  将创建好的img标签拼接到body中。
+    //  body.appendChild()
+    var body = document.querySelector('body')
+     body.appendChild(img)
+  </script>
+</body>
+</html>

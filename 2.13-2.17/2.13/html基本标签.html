@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html基本标签和 css基本用法</title>
+    <!--<style> 定义HTML文档的样式信息
+        在<style>中定义内部样式，我们称之为内部样式。-->
+    <style>
+    body{
+        background-color: plum;
+
+    }
+    h1{
+        color:blueviolet;
+        font-size: 25px;
+        font-weight: normal;
+    }
+    h2{
+        color:firebrick;
+        font-size: 25px;
+        /*字体粗细*/
+        font-weight: normal;
+        /*文本居中*/
+        text-align:center;
+    }
+    
+    p1{
+        /*文本缩进*/
+        text-indent: 2em;
+    }
+img{
+      width:300px; 
+      height:300px;
+}
+h6{
+       color:firebrick;
+        font-size: 25px;
+        font-weight: normal;
+         text-align:center;
+}
+    
+    
+    
+    </style>
+    <!--引入外部css文件-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--标题-->
+<h1>这是一个标题</h1>
+<h2>这是一个标题</h2>
+<!--在开始标签内部，通过给style属性赋值来添加样式 称之为行内样式-->
+
+
+<!--行内样式优先级最高-->
+
+<h3 style = "background-color:slategray;">这是一个标题</h3>
+<h4>这是一个标题</h4>
+<h5>这是一个标题</h5>
+<h6>这是一个标题</h6>
+<!--paragraph:段落-->
+<p>
+  &#x3000;&#x3000; 突然就是好想告诉你 天热了还不够大健身卡积分
+    id时间覅偶就是地方防腐剂大姐夫京东方就要花
+    费自己发的给偶家覅礼佛IE如提供IE如欧日普肌交
+    付噢诶剧哦数据库搜啊肌肤哦IEURhi IE吉娃【’圈】
+    让我；了【ed我如飞分【陪日佛牌五局热8
+</p>
+<p1>
+  &#x3000;&#x3000; 突然就是好想告诉你 天热了还不够大健身卡积分
+    id时间覅偶就是地方防腐剂大姐夫京东方就要花
+    费自己发的给偶家覅礼佛IE如提供IE如欧日普肌交
+    付噢诶剧哦数据库搜啊肌肤哦IEURhi IE吉娃【’圈】
+    让我；了【ed我如飞分【陪日佛牌五局热累算什么
+    痛才是真理
+</p1>
+
+<!--img:image 图片
+source： 资源
+alt: alternate 替换 备选项-->
+<img src="1.png" alt="山海经" style=" width:300px; height:300px;"><br/>
+<img src="2.jpg" alt="习近平" style="width:300px; height:300px;border:2px solid black"><br/>
+
+<!--a链接 href  hypertext refrence 超文本链接 该属性值为跳转页面-->
+<!--title:鼠标悬停时 给出提示
+target:目标 对象
+blank:新窗口打开
+-sself：自己的 本身的 当前窗口打开页面-->
+<a href="http://www.baidu.com" title="百度" target = "blank">百度一下 你就知道</a><br/>
+<a href="http://www.Google.com" title="谷歌" target = "-self">谷歌一下 你就知道</a><br/>
+<a href="http://www.hao123.com" title="hao123">hao123一下 你就知道</a>
+<a href="yaya.html">跳转吧</a>
+</body>
+</html>

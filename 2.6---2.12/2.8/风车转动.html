@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转动的风车</title>
+    <style>
+        html{
+            height:100%;
+        
+
+        }
+        body{
+            height: 100%;
+            margin:0px;
+            /*弹性布局*/
+            /*设置body中的 子元素，也就是main
+            让它在水平方向上居于底部，水平方向上居中*/
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;                                                                       
+        }
+        main{
+            width:1300px;
+            height:500px;
+            /*添加背景图使其与盒模型保持一致*/
+            background-image: url(caodi.png);
+            background-size: 100% 100%;
+            /*设置草地的最小宽度*/
+            min-width: 1300px;
+            position:relative;
+
+        }
+        #frist{
+            width:300px;
+            height:300px;
+            background-image: url(fengche.png);
+            background-size: 100% 100%;
+            position:absolute;
+            top:80px;
+            left:290px;
+
+        }
+        #second{
+            width:150px;
+            height:150px;
+            background-image: url(fengche.png);
+            background-size: 100% 100%;
+            position:absolute;
+            top:290px;
+            left:590px;
+
+        }
+        #third{
+           width:200px;
+            height:200px;
+            background-image: url(fengche.png);
+            background-size: 100% 100%;
+            position:absolute;
+            top:220px;
+            left:755px;
+        }
+        #time{
+                /*设置文本颜色*/
+                color: red;
+                /*设置文本的字体大小*/
+                font-size: 100px;
+            }
+            #date{
+                color: blue;
+                font-size: 30px; 
+            }
+            /*通过标签选择器“div”，找到三个风车，给他们指定动画*/
+        div{
+            /*动画名称*/
+             animation-name: rotate;
+             /*动画时间*/
+             animation-duration: 0.4s;
+             /*动画重复次数*/
+             /*interation*/
+             animation-iteration-count: infinite;
+             /*动画转动速度 linear:匀速*/
+             animation-timing-function: linear;
+        }
+
+        /*鼠标选定在风车上 加速。*/
+        div:hover{
+             animation-duration: 2s;
+        }
+        /*鼠标点击不松开时，停止动画*/
+        div:active{
+            animation: none;
+        }
+        /*定义关键帧动画*/
+             @keyframes rotate{
+                 /*0%：初始状态*/
+                 0%{
+                 transform: rotate(0deg)
+             }
+             /*100%： 结束状态*/
+                  100%{
+                  transform:rotate(360deg)
+        }
+        div1{
+               width:200px;
+               height:100px;
+        }
+         div2{
+              width:200px;
+               height:100px;
+
+         }
+    </style>
+</head>
+<body>
+    <!--main表示草地-->
+    <main>
+<div id="frist"></div>
+<div id="second"></div>
+<div id="third"></div>
+
+        <!--时间-->
+        <div1 id="time">datetime</div>
+        <div2 id="date">2017-2-8星期二
+
+    </main>
+</body>
+</html>

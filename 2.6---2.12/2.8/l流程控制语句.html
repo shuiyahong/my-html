@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流程控制语句</title>
+</head>
+<body>
+    <script>
+    // if 判断语句
+
+    /*
+      if(表达/判断条件）{满足条件时执行的代码}，满足条件下做什么事情)
+       if(){}else{},满足什么条件时做什么，不满足做什么
+       if(){}else if(){}else if(){}...多条件判断语句
+    */
+    var age = 19
+    if(age>=18){
+        // alert 提示输入框
+        alert("他的年龄已经超过了18岁,可以自己独立生活")
+    }
+    var score =100
+    if(score>=60){
+        alert('该学科合格')
+    
+    }
+    else{
+        alert("你的成绩不合格，需要补考")
+
+    }
+    if(score>=90){
+        alert("优秀")
+    }
+    else if (score>=80){
+
+        // &&:且 运算符，并且。
+        alert("良好")
+    }
+     else if (score>=60){
+     alert("合格")
+     }
+     else if(score<60){
+    alert("不合格")
+    }
+    // for 循环语句 i++ i=i+1
+    for(var i=4;i<=10;i++){
+        console.log (i)
+    }
+    </script>
+    
+</body>
+
+</html>

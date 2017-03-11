@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型</title>
+    <style>
+    /*
+    盒模型的组成部分：内容区域：widt/height
+                     填充区域： padding
+                     边框区域：border
+                     外边距区域 margin
+                     
+                     计算盒模型中的大小
+                     默认情况下：盒子的宽= width + padding（left/right）+ border（left/right）
+                     盒子的高= height + padding（left/bottom）+ border（left/bottom）*/ 
+                     
+    div{
+        /*定义和模型中的宽高*/
+
+        width: 300px;
+        height:200px;
+        color: plum;
+        padding: 50px 30px 100px 80px;
+        /*上50  下100 左右30
+        padding: 50px 30px 100px;
+        /*上下50 左右30*/
+        /*padding: 50px 30px;*/
+        /*上右下左都是50*/
+        /*padding: 50px;
+        padding-top: 20px;
+        padding-left:20px;*/
+        /*doctted:圆点虚线  dashed：虚线*/
+        border: 5px solid orangered;
+        border-bottom-color: lawngreen;
+        border-top-style:dashed;
+        border-left-width:20px;
+
+        margin:30px 20px 30px 20px;
+        /*margin-top: 20px;*/
+
+
+    }
+    span{
+        width: 300px;
+        height:300px;
+        color: lightblue;
+
+    }
+    p{
+        width: 300px;
+        height:300px;
+        color: lightblue;
+
+    }
+   h1{
+        width: 300px;
+        height:300px;
+        color: lightblue;
+
+    }
+    img{
+        width: 300px;
+        height:300px;
+    }
+    /*行标签:（span）内容多少就占据多大空间，不会独占一行 不能设置宽高
+    块标签：(div)内容不管有多少，都独占一行 能设置宽高 <p>  <h> 
+    img 是行内块标签:可以设置宽高，也不会独占一行*/
+    </style>
+</head>
+<body>
+    <!--division : 模块-->
+    <!--同样内容行标签比块标签占地少   span 行标签  div 块标签-->
+    <div>   
+    李冰冰与鲜肉男友机场亲昵依偎其怀中小鸟依人
+    地方财力比拼:广东破万亿居首相当于11省份总和
+    萧敬腾公开恋情?唱完“心爱的姑娘”就献吻她
+    台湾游览车翻车事故已致32死车上无大陆游客
+    王健林、李嘉诚、马云……商界大佬的办公室都长什么样?
+</div>
+<span>
+    李冰冰与鲜肉男友机场亲昵依偎其怀中小鸟依人
+    地方财力比拼:广东破万亿居首相当于11省份总和
+    萧敬腾公开恋情?唱完“心爱的姑娘”就献吻她
+    台湾游览车翻车事故已致32死车上无大陆游客
+    王健林、李嘉诚、马云……商界大佬的办公室都长什么样?
+    C:\Users\Administrator\Desktop\2.14\盒模型.html
+</span>
+<h1> 情人节s</h1>
+<p>块标签</p>
+<img src="3.jpg" alt="图呢">
+<!--标签类型可以通过css中的display进行转换
+display:block 把某标签转换为块标签
+display:inline 把某标签转换为行标签
+display：inline-block  把某标签转换为行内块标签-->
+
+</body>
+</html>

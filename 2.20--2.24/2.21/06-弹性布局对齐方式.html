@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局（1）</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        
+        main {
+            height: 600px;
+            border: 2px solid palevioletred;
+            /*（1）实现弹性布局的前提，必须有一个弹性盒子*/
+            display: flex;
+            /*（2）设置主轴的方向 row：依次水平显示 column：依次垂直显示
+            row-reverse：依次从右上往左上   column-reverse：依次从左下往左上*/
+            flex-direction: row;
+            /*（3）项目在主轴方向的对齐方式flex-start:水平方向从头开始
+             flex-end：水平方向从右倒叙 space-between：两端对齐中间相等
+             stretch：占满整个高 盒子本身没高  center 居中*/
+            justify-content: center;
+            /*（4）项目在侧轴方向的对齐方式 baseline: 基线对齐*/
+            align-items: center;
+            /*(5) 多轴线对齐方式 项目对齐方式*/
+            align-content: space-between;
+            /*（6）是否换行*/
+            flex-wrap: wrap;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            border: 1px solid cornflowerblue;
+            /*设置为零*/
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>box1下雪</div>
+        <div>box2心情</div>
+        <div>box3国家A</div>
+        <div>box4奋斗 a</div>
+        <div>box1下雪</div>
+        <div>box2心情</div>
+        <div>box3国家A</div>
+        <div>box4奋斗 a</div>
+    </main>
+</body>
+
+</html>

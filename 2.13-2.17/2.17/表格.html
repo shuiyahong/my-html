@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    table{
+        border: 1px solid plum;
+        /*设置边框与边框之间的间隔*/
+        border-spacing:0px;
+        /*设置边框线重叠部分的合并与分离
+        collapse：合并
+        separate:分离*/
+        border-collapse: collapse;
+        text-align: center;
+        /*表格居中*/
+        margin: 10px auto;
+    }
+    th{
+        border: 1px solid lightgreen;
+    }
+    td{
+        border: 1px solid lightgreen;
+
+        width: 100px;
+        height: 40px;
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- table 表示整个表格-->
+    <table>
+        <!--caption：表格的标题-->
+        <caption>h5课程表</caption>
+       <!--thead: 表头-->
+       <thead>
+           <!--tr：表示表格中的一行-->
+          <tr>
+              <!--早上-->
+              <!--th表示每一列的标题-->
+              <th>星期一</th>
+              <th>星期二</th>
+              <th>星期三</th>
+              <th>星期四</th>
+              <th>星期五</th>
+              <th>星期六</th>
+              <th>星期日</th>
+          </tr>
+          <!--中午-->
+          </thead>
+          <tr>     
+          <!--td：table date,表示表格具体的数据内容-->
+          <td>html5</td>
+          <td>html5</td>
+          <td>html5</td>
+          <td>html5</td>
+          <td>html5</td>
+          <!--td rowspan="2"合并行-->
+          <td rowspan="2">自习</td>
+          <td rowspan="3">周末</td>
+           </tr>
+       <tr>
+           <!--晚上-->
+           <td>html5</td>
+          <td>html5</td>
+          <td>html5</td>
+          <td>html5</td>
+          <td>html5</td>
+       
+          
+       </tr>
+       <tr>
+           <!--td colspan="5"合并列-->
+           <td colspan="5">自习</td>
+            <td >周末</td>
+          
+           
+       </tr>
+
+    </table>
+    <!--table块标签-->
+
+    <span>loveyou yaya </span>
+</body>
+</html>

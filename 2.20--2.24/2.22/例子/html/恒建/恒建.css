@@ -1,0 +1,177 @@
+body,ul,figure{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+  
+     overflow-x: hidden;
+     margin: 0px auto;
+     min-width: 1903px;
+}
+a{
+    text-decoration: none;
+    
+}
+header {
+    width: 1000px;
+    height: 90px;
+    margin: 0px auto;
+}
+.tleft{
+    width: 1000px;
+    margin:0px auto;
+}
+header .logo{
+     width:500px;
+     height: 90px;
+    float: left;
+}
+nav ul{
+    height: 30px;
+    margin: 0px auto;
+    background-color: deepskyblue;
+   }
+nav li{
+    float: left; 
+    margin-right: 50px; 
+    list-style: none;
+
+}
+.right ul li{
+     background-image: url(tb.jpg);
+     background-repeat: no-repeat;
+     background-position: -2px 5px;
+ }
+nav ul li a:hover{
+    background-color: white;
+    color: red;  
+      padding: 5px 5px 10px;
+}
+nav ul li:nth-child(1){
+    margin-left: 500px;
+}
+.left.banner{
+    width: 1000px;
+    margin: 0px auto;
+}
+.banner img{
+    width: 100%;
+}
+.main{
+    width: 1000px;
+    margin: 0px auto;
+}
+main .main-box{
+    overflow: hidden;
+}
+.left{
+    width: 430px;
+   float: left;
+  
+
+}
+.right{
+    width: 500px;
+    float: right;
+}
+.section{
+    text-indent: 2em;
+}
+.right ul li{
+    font-size: 16px;
+    overflow: hidden;
+    padding-left: 10px;
+    margin-top: 30px;
+    border-bottom: 1px dotted gray;
+}
+
+.right ul li a{
+    float: left;
+    border-bottom: 1px dotted gray;
+}
+.right ul li span{
+    float: right;
+}
+
+nav ul::after{
+    display: block;
+    content: " ";
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+#main{
+   width: 100%;
+    margin: 0px auto;
+}
+#main span{
+    color:gray;
+}
+.section1{
+       width: 100%;
+       
+       overflow: hidden;
+       margin: 0px auto;
+        background-color: lightgrey;
+}
+.section1>div,.section1>img{
+    float: left;
+   
+   
+}
+.section1 div{
+       width: 300px; 
+        text-align: center;
+         
+        
+}
+
+.center{
+    width: 1000px;
+    margin: 0px auto;
+}
+.center img{
+    margin-left: 100px;
+}
+.last{
+    width: 100%;
+    display: flex;
+    margin: 0px auto;
+    background-color: lightgray;
+
+}
+.last div h2{
+    text-align: center;
+}
+.last ul li{
+    width: 180px;
+    flex-direction: row;
+    margin-left: 50px;
+    justify-content: space-between;
+  
+}
+.go{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+      padding-top: 30px;
+       border-top: 1px solid black;
+       margin: 0px auto;
+     
+     
+}
+.go #left{
+    width: 150px;
+    margin-right: 100px;
+  
+}
+.go #right{
+    width: 150px;
+   
+}
+.sucess{
+    height: 60px;
+    background-color: gray;
+    text-align: center;
+    line-height: 30px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择优先级（1）</title>
+    <style>
+    /*css选择器优先级的计算规则，根据权重（权值）来计算：
+    !important 可以把所在标签内的某个样式属性的优先级提到最高
+    **但是它提升的是样式的优先级，
+    不会提高该选择器的优先级**尽量少用。
+
+    行内样式权值1000
+    
+    id选择器的权重是100
+    class/伪类选择器/属性选择器/选择器的权重是10
+    标签选择器， 权值是1
+    父子选择器>>>  权重为0
+    多种选择器同时存在权重相加
+    */
+    .text{
+        color: red;
+    }
+    p{
+        /*直接作用到样式属性上，把该css样式属性的优先级提到最高
+        **但是它提升的是样式的优先级，
+        不会提高该选择器的优先级**尽量少用。 */
+        color:blue !important;
+    }
+    
+    #par{
+        color: lightcoral;
+    }
+
+    .container section{
+        color: green;
+    }
+    .container #sec{
+        color: skyblue;
+    }
+
+    </style>
+</head>
+<body>
+     <P class="text" id="par" style="color:black">学习样式选择器优先级的问题</P>   
+<div class="container">
+    <section class="sec">我爱你时你正寒窗苦读</section>
+</div>
+
+</body>
+</html>

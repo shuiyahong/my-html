@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <style>
+    html{
+        width: 100%;
+    }
+    body{
+        width: 100%;
+        margin: 0px auto;
+    }
+    div{
+        width: 1000px;
+        /*text-align: center;*/
+        font-size: 22px;
+        margin-top: 50px;
+        margin-left: 300px;
+    }
+    label{
+        /*margin: 100px 30px auto 20px;*/
+        /*padding-top: 50px;*/
+    }
+    input{
+        /*width: 300px;
+        height: 40px;*/
+    }
+    bottom{
+        /*background-color: green;
+        width: 200px;
+        height: 50px;*/
+    }
+   #bottom1{
+       /*width: 200px;
+       height: 50px;*/
+        margin-left:50px;
+       background-color: powderblue;
+   }
+   #bottom2{
+       /*width: 400px;
+       height: 100px;*/
+      
+       margin-left: 200px;
+       background-color: hotpink;
+   }
+   select{
+       /*background-color: palegoldenrod;*/
+       margin-top: 20px;
+   }
+   p{
+       /*background-color: palegreen;*/
+       font-size: 20px;
+       margin-bottom: 20px;
+   }
+   input check{
+       margin-left: 0px;
+   }
+   #sex{
+       /*margin-left: -100px;*/
+   }
+    </style>
+</head>
+<body>
+
+    <nav style="border-bottom:1px solid lightgray; text-align:left">
+            <span>注册账户</span></nav>
+
+    <div>
+    <form action="#">
+    <label for="username">昵称:</label>
+    <input type="text"id="username"required="required"><br/><br/>
+
+    <label for="mima">密码:</label>
+    <input type="text"id="mima"required="required"><br/><br/>
+    
+    <label for="mimatoo">确认密码:</label>
+    <input type="text"id="mimatoo"required="required"><br/><br/>
+    
+
+    <label for="sex">性别:</label>
+    <input id="sex" type="radio"name="sex"checked value="male">男
+    <input  id="sex" type="radio" name="sex"value="famale">女<br/><br/>
+    
+     <label for="birthday">生日：</label>
+     <select name="time" id="gongli"placeholder="公历">
+     <option value="公历"selected>公历</option>
+     <option value="阳历">阳历</option>
+     </select>
+
+     <select name="birthday" id="year"placeholder="年">
+     <option value="1996">1996</option>
+     <option value="1997">1997</option>
+     <option value="1999">1999</option>
+     <option value="2008">2008</option>
+     <option value="2010">2010</option>
+     </select>
+
+     <select name="birthday" id="month">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+     <option value="6">6</option>
+     <option value="7">7</option>
+     <option value="8">8</option>
+     <option value="9">9</option>
+     <option value="10">10</option>
+     <option value="11">11</option>
+     <option value="12">12</option>
+     </select>
+
+     <select name="birthday" id="day">
+     <option value="1">1</option>
+     <option value="6">6</option>
+     <option value="9">9</option>
+     <option value="16">16</option>
+     <option value="25">25</option>
+     <option value="30">30</option>
+     </select><br/>
+
+     <label for="space">所在地:</label>
+     <select name="space" id="national">
+           <optgroup label="national">
+               <option value="">中国</option>
+               <option value="">美国</option>
+               <option value="">英国</option>
+            </optgroup> 
+    </select>
+    <select name="space" id="space">
+            <optgroup label="province">
+               <option value="">河南</option>
+               <option value="">山西</option>
+               <option value="">浙江</option>
+            </optgroup> 
+     </select>
+
+     <select name="space" id="space">
+            <optgroup label="city">
+               <option value="">郑州</option>
+               <option value="">三门峡</option>
+               <option value="">洛阳</option>
+               <option value="">商丘</option>
+            </optgroup> 
+     </select><br/><br/>
+
+     <label for="yanzhengma">验证码</label>
+     <input type="text"id="yanzhengma"placeholder="点击完成验证">
+     <span style="font-size:20px;color: gray">请先完成安全验证</span><br/><br/>
+     
+     <label for="tel">手机号码</label>
+     <input type="text"id="tel">
+     <p>忘记密码时，可通过该手机号快速找回密码</p>
+     <small>请输入中国大陆手机号码（不含小灵通）</small><br/>
+     <small>其他地区区号点击这里</small><br/>
+
+      <input type="text">
+      <bottom id ="bottom1">获取短信验证码</bottom><br/>
+
+      <input type="checkbox"> 同时开通QQ空间<br>
+      <input type="checkbox"> 我已阅读并同意相关服务条款和隐私政策<br>
+    
+          <bottom id="bottom2">提交注册</bottom>
+    </form>
+    </div>
+</body>
+</html>

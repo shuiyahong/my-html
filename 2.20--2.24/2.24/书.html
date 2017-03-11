@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书</title>
+    <style>
+
+     html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        margin: 0px;
+    }
+    section{
+        height: 100%;
+        background-color: black;
+        position: relative;
+      
+        perspective: 2000PX;
+        /*设置观察者*/
+        perspective-origin: 100% 30% 0%;
+
+  
+    }
+    div{
+        width: 300px;
+        height: 450px;
+        /*设置透明度*/
+        opacity: 0.7;
+        position: absolute;
+        /*calc：计算，“-”两边一定要有空格*/
+        left:calc(50% - 300px / 2);
+        top:calc(50% - 450px / 2);
+        /*设置书页做3d效果的参考点*/
+         transform-origin: 0 0 0;
+        
+    }
+    .one{
+        background-color: palegoldenrod;
+        transform: rotateY(0deg);
+       
+             
+    }
+     .two{
+        background-color: lightgreen;
+        transform: rotateY(-10deg);
+       
+    }
+     .three{
+        background-color: lightblue;
+        transform: rotateY(-20deg);
+      
+    }
+     .four{
+        background-color: lightcoral;
+        transform: rotateY(-30deg);
+        
+    }
+     .five{
+        background-color: plum;
+        transform: rotateY(-40deg);
+        
+    }
+     .six{
+        background-color: khaki;
+        transform:rotateY(-50deg);
+     
+         
+    }
+    </style>
+</head>
+<body>
+    <section>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="six">6</div>
+    </section>
+</body>
+</html>

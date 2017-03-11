@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正方体</title>
+    <style>
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        margin: 0px;
+    }
+    section{
+        height: 100%;
+        background-color: black;
+        position: relative;
+       /*设置观察者（视点）与z轴（z=0平面）的距离*/
+        perspective: 2000PX;
+       /*观察者角度  是基于x轴y轴。默认值为50% 50%; */
+        perspective-origin: 50% 50%;
+
+    }
+    div{
+        width: 300px;
+        height: 300px;
+        /*设置透明度*/
+        opacity: 0.7;
+        position: absolute;
+        /*calc：计算，“-”两边一定要有空格*/
+        left:calc(50% - 300px / 2);
+        top:calc(50% - 300px / 2);
+    }
+    /*z-index改变堆叠样式
+    text-indent：首行缩进*/
+    /*六个面的左上角坐标（0,0,0）*/
+    .top{
+        /*
+        2D图形转换中 图形转换的参考点是 transform-origin: 50% 50%; 
+        3D图形转换中 图形转换的参考点是 transform-origin: 50% 50% 0%； 
+        */
+        background-color: palegoldenrod;
+    
+        transform: translateY(-150px) rotateX(90deg);
+    }
+    .bottom{
+        background-color: yellow;
+         transform: translateY(150px) rotateX(90deg);
+    }
+    .left{
+        background-color: green;
+         transform: translateX(-150px) rotateY(90deg);
+    }
+    .right{
+        background-color: blue;
+         transform: translateX(150px) rotateY(90deg);
+    }
+    .front{
+        background-color: deeppink;
+         transform: translateZ(150px);
+    }
+    .back{
+        background-color: orangered;
+         transform: translateZ(-150px);
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="top">上</div>
+        <div class="bottom">下</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <div class="front">前</div>
+        <div class="back">后</div>
+    </sectio classn>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插图标题 自动编号</title>
+    <style>
+    body{
+       /*1）创建计数器*/
+        counter-reset: dog 0;
+    }
+
+figure{
+    /*2）设置计数器增量*/
+    counter-increment: dog;
+}
+   /*获取当前计数器的值*/
+figcaption::before{
+
+    content:"图"counter(dog)".";
+
+}
+/*属性选择器*/
+/*figcaption[lang=en]找到属性lang的取值为en的figcaption标签*/
+figcaption[lang=en]::before{
+     content: 'dog'counter(dog)'.';
+}
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="1.jpg" alt="">
+        <figcaption>小狗</figcaption>
+          <figcaption lang ="en">dog</figcaption>
+        </figure>
+
+    <figure>
+        <img src="1.jpg" alt="">
+          <figcaption>小狗</figcaption>
+          <figcaption lang ="en">dog</figcaption>
+        </figure>
+
+    <figure>
+        <img src="1.jpg" alt="">
+          <figcaption>小狗</figcaption>
+          <figcaption lang ="en">dog</figcaption>
+        </figure>
+
+    <figure>
+        <img src="1.jpg" alt="">
+          <figcaption>小狗</figcaption>
+          <figcaption lang ="en">dog</figcaption>
+        </figure>
+</body>
+</html>

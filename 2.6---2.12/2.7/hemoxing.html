@@ -1,0 +1,55 @@
+ <!-- ！+ tab键，生成html文档的基本结构-->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型</title>
+    <style>
+     div{
+         /*设置内容区域 宽高*/
+         width:350px;
+         height:100px;
+         /*设置内边距的大小，按照顺时针方向：上，右，下，左*/
+         /*padding-top,bottom,lefe,right*/
+         padding: 20px 20px 30px 30px;
+          /*边框的厚度 边框的样式(solid:实线，dashed:虚线，dotted:圆点线) 边框的颜色*/
+         border:10px dotted red;
+     }
+     section{
+          /*设置内容区域 宽高*/
+         width:200px;
+         height:80px;
+         /*设置内边距的大小，按照顺时针方向：上，右，下，左*/
+         padding: 25px 25px 35px 35px;
+          /*边框的厚度 边框的样式(solid:实线，dashed:虚线，
+          dotted:圆点线) 边框的颜色*/
+         border:10px solid pink;
+         /*margin-top: 50px;*/
+         /*margin-bottom: 50px*/
+         /*margin-left: 30px*/
+         /*margin-right: 30px*/
+         /*顺时针方向：上右下左*/
+         margin:50px 50px 30px 30px;
+     }
+     /*div是块的意思，section是部分的意思 
+     两个都可以在一个网页中多次使用，加序号区分样式*/
+    </style>
+</head>
+<body>
+    <!--
+        盒模型的组成部分：（方便页面布局，为页面提供架构）
+    1.内容区域（宽高）
+    2.填充区域（内边距（padding）
+    3.边框（border）
+    4.外边距(margin)（盒子之间的间距）
+    每一个标签所描述的内容，对应的都以一个容器，
+    这个容器我们称之为：“盒模型”。
+    -->
+    <div>块(盒子模型)</div>
+    <section>我也是个盒子</section>
+
+    
+    <strong>我爱你</strong>
+    <big>我也喜欢你</big>
+</body>
+</html>

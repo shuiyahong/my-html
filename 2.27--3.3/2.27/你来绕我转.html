@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>你来绕我转</title>
+    <style>
+        section {
+            width: 1000px;
+            height: 1000px;
+            margin: 0px auto;
+            border: 2px solid #000;
+        }
+        
+        div {
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid palevioletred;
+            text-align: center;
+            /*padding:300px 300px;*/
+            position: relative;
+        }
+        
+        #center {
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            top: calc(50% - 64px/2);
+            left: calc(50% - 64px/2);
+           
+        }
+        
+        #ate {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            animation-name: rotate;
+            animation-duration: 20s;
+            animation-iteration-count: 10;
+            /*animation-fill-mode: forwards;*/
+             transform-origin: 100px 200px;
+        }
+        
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            /*from {
+                top: 0px;
+                left: 0px;
+            }
+            25% {
+                top: 0px;
+                left: calc(100% - 64px);
+            }
+            50% {
+                top: calc(100% - 64px);
+                left: calc(100% - 64px);
+                transform: (180deg);
+            }
+            75% {
+                top: calc(100% - 64px);
+                left: 0px;
+            }
+            100% {
+                top: 0px;
+                left: 0px;
+            }*/
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <img src="2.png" alt="" id="center">
+            <img src="1.png" alt="" id="ate">
+
+        </div>
+    </section>
+
+</body>
+
+</html>

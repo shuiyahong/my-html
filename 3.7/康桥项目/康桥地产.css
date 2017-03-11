@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f6f6f6;
+    /*禁止用户选择网页中的文本*/
+    -moz-user-select: none;
+}
+header{
+    height: 36px;
+    border-bottom: 1px solid #34cc67;
+    text-align: center;
+    line-height: 36px;
+    font-size: 15px;
+}
+img{
+    width: 100%;
+    /*display: block;*/
+}
+main{
+    background-image: url(image/line.png);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 6px;
+    overflow: hidden;
+
+}
+main ul{
+    list-style: none;
+    width: 50%;
+    float: left;
+}
+main ul li{
+    padding: 14px;
+}
+main ul li a{
+    padding: 6px;
+    border: 1px solid lightgray;
+    display: block;
+    position: relative;
+}
+/*main ul li a img{
+    width: 100%;
+}*/
+main ul li a i{
+    position: absolute;
+    top: 16px;
+    width: 6px;
+    height: 11px;
+    background-size: 100%;
+}
+main .left li a i{
+    right: -5px;
+    background-image: url(image/right_bg.png);
+}
+main .right li a i{
+    left: -5px;
+    background-image: url(image/left_bg.png);
+}
+main ul li a span{
+    position: absolute;
+    top: 6px;
+    height: 24px;
+    width: 16px;
+    background-size: 100%;
+    background-image: url(image/camera.png);
+}
+main .left li a span{
+    right: -23px;
+}
+main .right li a span{
+    left: -23px;
+}
+.right{
+    margin-top: 52px;
+}
+footer{
+    text-align: center;
+    color: grey;
+    line-height: 42px;
+    font-size: 13px;
+}

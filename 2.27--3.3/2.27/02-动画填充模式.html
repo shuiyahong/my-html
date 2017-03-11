@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画填充模式</title>
+    <style> 
+    section{
+        width: 800px;
+        height: 800px;
+        background-color: plum;
+        margin: 0px auto;
+
+        text-align: center;
+        position: relative;
+        
+    }
+    img{
+        position: absolute;
+
+        animation-name: jump;
+        animation-duration: 4s;
+
+        /*animation-fill-mode:动画填充模式。
+        forwards:前面；保持动画结束状态，处于to(100%)的位置。
+        backwards:后面保持动画开始状态处于from 
+        （0%）的位置
+        both：都 保持动画开始结束状态
+        具体指动画开始前，标签处于开始状态
+        动画结束时，标签处于结束状态*/
+        animation-fill-mode: forwards;
+
+    }
+    @keyframes jump{
+        from{
+             top: 0px;
+        }
+        20%{
+            /*第一次落地*/
+            top: calc(100% - 64px);
+        }
+        40%{
+            /*第一次弹起*/
+            top: 100px;
+        }
+        60%{
+            /*第二次落地*/
+            top:calc(100% - 64px);
+        }
+        80%{
+            /*第二次弹起*/
+            top:300px;
+        }
+        to{
+            /*第三次落地*/
+            top:calc(100% - 64px);
+        }
+            
+    }
+    </style>
+</head>
+<body>
+    <div>
+     <section>
+         <img src="2.png" alt="">
+     </section>   
+    </div>   
+</body>
+</html>

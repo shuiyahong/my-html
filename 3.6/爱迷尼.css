@@ -1,0 +1,107 @@
+html{
+    font-size: 16px;
+}
+ul,body{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar{
+    background-color: black;
+    color: white;
+}
+.content h1{
+    font-size: 24px;
+}
+.content ul{
+    list-style: none;
+}
+.content ul li a{
+    text-decoration: none;
+}
+/*鼠标点击变白色*/
+#p1 li a{
+    color: white;
+}
+#p1 li a:hover{
+   background-color: grey;
+}
+.content ul li{
+    float: left;
+    margin-right: 20px;
+    /*line-height: 30px;*/
+}
+.btn-group .dropdown-menu{
+    margin-right:10px;
+}
+.content .navbar-brand{
+    padding: auto 0px;
+    margin-left: 50px;
+}
+.btn-group  .btn{
+    margin-top: 10px;
+    border: none;
+    background-color: black;
+     color: white;
+     margin-left: 50px; 
+}
+/*客户管理及查询*/
+.main h2{
+    height: 50px;
+    font-size: 28px;
+    margin-left: 50px;
+    padding-top: 10px;
+    
+}
+.contentbox{
+    margin-left: 50px;
+}
+.table table{
+    margin-top: 20px;
+}
+.table table td span{
+    color: cornflowerblue;
+}
+.table table th,td{
+   border: 1px solid gray;
+   height: 40px;
+   padding:5px;
+   text-align: left;
+}
+#per{
+    background-color: limegreen;
+}
+#sea{
+    background-color: lightsalmon;
+}
+/*点击弹出对话框*/
+.search label{
+    font-size: 20PX;
+    margin-right: 100PX;
+}
+.search input{
+  
+   margin: 0px;
+}
+.choose label{
+    font-size: 20PX;
+    margin-right: 100PX;
+}
+.choose input{
+  
+   margin: 0px;
+}
+
+.modal-content-one{
+    width: 400px;
+    height: 500px;
+}
+.modal-content-two{
+    width: 400px;
+    height: 500px;
+}
+#input{
+    height: 40px;
+}
+#fond{
+    height: 40px;
+}

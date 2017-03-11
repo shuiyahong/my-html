@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>行走的人</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            height: 100%;
+            margin: 0px;
+            background-color: black;
+            position: relative;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-image: url(1.png);
+            background-repeat: no-repeat;
+
+            /*background-color: palevioletred;*/
+            position: absolute;
+            /*animation-name: 指定让div执行rotate动画*/
+            animation-name: move;
+            /*animation-duration:指定动画所持续的时间*/
+            animation-duration: 4s;
+
+             animation-iteration-count:3;
+
+             animation-direction: alternate;
+        }
+        
+        @keyframes move {
+            /*from：从，表示动画的开始状态  等同于0%*/
+            from {
+                top: 0px;
+                left: 0px;
+            }
+            12.5% {
+                top: 0px;
+                left: calc(100% - 200px/2);
+            }
+            25% {
+                top: 0px;
+                left: calc(100% - 200px);
+            }
+            37.5% {
+                top: calc(100% - 200px/2);
+                left: calc(100% - 200px/2);
+            }
+            50% {
+                top: calc(100% - 200px);
+                left: calc(100% - 200px);
+            }
+            62.5% {
+                top: calc(100% - 200px);
+                left: 0px;
+            }
+            75%{
+                top: calc(100% - 200px/2);
+                left: calc(100% - 200px/2);
+            }
+            87.5% {
+                top: calc(100% - 200px/2);
+                left: 0px;
+            }
+            to {
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

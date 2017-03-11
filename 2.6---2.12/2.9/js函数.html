@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数应用/方法</title>
+    <style>
+   div{
+         width:300px;
+         height:300px;
+         background-color: green;
+  }
+    img{
+         width:300px;
+         height:300px;
+  }
+    
+    </style>
+</head>
+<body>
+      <div id="box" onclick="changecolor()"></div>
+      <img src="caodi.png" alt="最美图片">
+      <button type="button" onclick = "changeText()">开始</button>
+       
+ <script>
+    // 封装代码，完成其求和功能。
+    /*
+    函数的声明：
+    function:定义函数的关键字
+    sum：函数名
+    <img src="10.jpg" alt="既然青春留不住">
+    <button type="button" onclick "changeText()">停止</button>
+    （num1 num2 ）参数列表,参数就是要完成某个功能时，一些必备条件。
+    {}：函数体，封装代码，完成一个功能。
+    */
+    function sum(num1, num2){
+        var result = num1 + num2
+        return result 
+    }
+    // 函数的调用
+    var a = sum(30,60)
+     alert(a)
+    //  console.log(a)
+
+    
+        function changecolor(){
+            var ele=document.getElementById("box")
+            ele.style.backgroundColor = 'blue'
+        
+        }
+        var count=0
+        function changeText(){
+            var ele = document.querySelector("button")
+            var img = document.querySelector("img")
+            if(count%2 == 0){
+                ele.innerText='停止'
+                img.src = 'fengche.png'
+            }
+            else{
+                ele.innerText='开始'
+                img.src = 'caodi.png'
+                
+        }
+          count++
+                                         
+     }
+    </script>
+
+</body>
+</html>

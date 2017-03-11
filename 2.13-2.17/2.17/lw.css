@@ -1,0 +1,162 @@
+body{
+    margin: 0px;
+    background-color: gray;
+
+}
+body,h1,h2,h3,h4,h5,h6,p,ul{
+    margin: 0px;
+    /*background-color: gray;*/
+}
+article{
+       width:1000px;
+       height:2000px;
+     font-family: "宋体";
+
+     padding: 20px 100px;
+       margin: 0px auto;
+       background-color: whitesmoke;
+
+       border: 1px solid red;
+       box-sizing: border-box;
+
+/*创建一个计数器对h2计数*/
+       counter-reset: h2 -1;
+       
+}
+header{
+    /*text-align: center;*/
+}
+header  h1{
+    font-style: 20px;
+    text-align: center;
+}
+address{
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+}
+address b{
+     font-weight: normal;
+}
+abbr{
+    text-decoration: none;
+}
+header .abstract,.keywords,.index{
+    text-align: justify;
+    font-style: 16px;
+    line-height:20px;
+}
+header .abstract::before{
+    content: '摘要'':';
+    font-weight: bold;
+}
+header .abstract cite{
+   font-style: normal;
+}
+header .abstract cite::before{
+   content: '“';
+}
+header .abstract cite::after{
+  content: '”';
+}
+header .keywords::before{
+    content: '关键字''：';
+    font-weight: bold;
+}
+header .index::before{
+    content: '中国分类号'':';
+    font-weight: bold;
+}
+
+
+
+
+
+header[lang = "en"]{
+    /*text-align: center;*/
+}
+header[lang = "en"]  h1{
+    font-style: 20px;
+    text-align: center;
+}
+address{
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+}
+address b{
+     font-weight: normal;
+}
+abbr{
+    text-decoration: none;
+}
+header[lang = "en"] .abstract,.keywords{
+    text-align: justify;
+    font-style: 16px;
+    line-height:20px;
+}
+header[lang = "en"] .abstract::before{
+    content: 'Abstract'':';
+    font-weight: bold;
+}
+header[lang = "en"] .abstract cite{
+   font-style: normal;
+}
+header[lang = "en"] .abstract cite::before{
+   content: '“';
+}
+header[lang = "en"] .abstract cite::after{
+  content: '”';
+}
+header[lang = "en"] .keywords::before{
+    content: 'Key words''：';
+    font-weight: bold;
+}
+/*header[lang = "en"] .index::before{
+    content: '中国分类号'':';
+    font-weight: bold;
+}*/
+
+
+h2{
+    font-style: 20px;
+    font-weight: normal;
+/*计数器递增*/
+    counter-increment: h2;
+
+}
+ /*查找计数器的值*/
+h2::before{
+       content: counter(h2)'';
+       counter-reset: h3;
+     
+}
+h3{
+    font-size: 20px;
+    font-weight: normal;
+    counter-increment: h3;
+}
+h3::before{
+       content: counter(h2)'.'counter(h3)'';
+}
+section{
+    margin: 20px;
+} 
+footer{
+    font-size: 18px;
+}  
+footer ol{
+    padding: 0px;
+    list-style:normal;
+    counter-reset: li;
+}
+footer ol li{
+    counter-increment: li;
+}
+
+li::before{
+    content:'[' counter(li)']';
+}
+li{
+    list-style-type: none;
+}

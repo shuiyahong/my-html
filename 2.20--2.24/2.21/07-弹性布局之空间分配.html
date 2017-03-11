@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局（2）</title>
+
+    <style> 
+    body{
+         margin: 0px;
+    }
+    main{
+        height:500px;
+        border:1px solid red;
+        display: flex;
+      
+    }
+    div{
+        height: 100px;
+        border: 1px solid purple;
+        /*(1) 定义项目排列顺序*/
+        order:0;
+        /*(2)设置项目在主轴方向上占据的空间*/
+        flex-basis: 100px;
+        /*(3)设置项目的缩小比例，默认值1 值越大缩小的程度越大*/
+        /*flex-shrink: 0;*/
+        /*(4)设置项目放大比例 默认为0*/
+        flex-grow:1;
+    }
+    </style>
+</head>
+<body>
+<main>
+    <div style="flex-shrink:5; align-self:flex-start">box1</div>
+    <div style="flex-grow: 3">box2</div>
+    <div>box3</div>
+    <div>box4</div>
+    <div>box5</div>
+    <div>box6</div>
+    <!--
+        (5)order:设置项目的排列顺序，值越小，位置越靠前。
+    -->
+    <div style="order:5">box7</div>
+    <div style="order:4">box8</div>
+    
+</main>
+</body>
+</html>

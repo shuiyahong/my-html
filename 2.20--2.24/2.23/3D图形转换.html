@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D图形转换</title>
+    <style>
+    /*先旋转轴线也会转
+    先平移在旋转轴不动*/
+    div{
+        width: 300px;
+        height: 300px;
+    }
+    .containor{
+        border: 1px solid #000;
+        margin: 100px auto;
+/*一般3d 转换（视角）写在3d变换元素的父元素中
+给子元素构建3d透视场景*/
+
+        /* perspective: 透视
+         perspective属性指定观察者与z=0平米案件的距离
+         它可以是三维空间中变换的元素产生透视效果
+         z>0三维空间中变换的元素会比正常的大
+          z<0三维空间中变换的元素会比正常的小
+          （近大远小）
+
+         */
+         /*  perspective-origin用来设置视点角度是基于x轴y轴z轴 */
+        perspective:1000px; 
+       /*默认视角位置50% 50%*/
+        perspective-origin: 50% 50%;
+    }
+    .box{
+        background-color: red;
+        /*opacity透明度 设置取值范围[0 1]*/ 
+        opacity:0.5;
+         /*
+           3D图形转换：平移（translste）缩放（scale）旋转 （rotate）
+         */
+          transform: translateZ(500px);
+         /*transform: rotate3d(1; 0;0;30deg):前三个值说明绕那个值旋转（1表示绕该轴旋转 0相反）
+         最后一个值是旋转角度*/
+        /*transform: rotate3d(1,0,0,30deg);*/
+        /*平移（x,y,z）*/
+        /*transform: translate3d(10px,20px,30px);*/
+        /*缩放（x,y,z)*/
+        /*transform: scale3d(1,1.5,2);*/
+    }
+    </style>
+</head>
+<body>
+    <div class="containor">
+        <div class="box">3D转换元素</div>
+    </div>
+    
+</body>
+</html>
+<!--
+    如何确定顺时针方向？
+    左手法则：大拇指指向x轴y轴z轴 的正方向，四指弯曲等方向为顺时针方向。
+-->

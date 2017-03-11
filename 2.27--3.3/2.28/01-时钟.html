@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        margin: 0px auto;
+        background-color: ghostwhite;
+        background-image:url(clock.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        /*设置背景图片的大小，百分比相对于body*/
+        /*高度是填满body，宽度是随着（auto）高度的变化等比例缩放，保证图片不会变形。*/
+        /*background-size: auto 100%;*/
+        position: relative;
+    }
+    #dot{
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+
+        /*定位到body正中间*/
+        position: absolute;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+      /*改变堆叠顺序 让红色圆点覆盖其他定位元素*/
+        z-index: 1;
+
+    }
+    #hour{
+        width: 10px;
+        height: 200px;
+        /*background-color: green;*/
+
+         position: absolute;
+         top: calc(50% - 100px);
+         left: calc(50% - 5px);
+
+         animation-duration: 43200s;
+    }
+    #hour>span{
+        display: inline-block;
+        width: 10px;
+        height: 120px;
+        background-color:lightskyblue; 
+
+    }
+
+      #minute{
+        width: 8px;
+        height: 300px;
+        /*background-color: pink;*/
+
+         position: absolute;
+         top: calc(50% - 150px);
+         left: calc(50% - 4px);
+
+         animation-duration: 3600s;
+    }
+    #minute>span{
+        display: inline-block;
+        width: 8px;
+        height: 170px;
+        background-color:plum; 
+
+    }
+
+      #second{
+        width: 6px;
+        height: 400px;
+        /*background-color: green;*/
+
+         position: absolute;
+         top: calc(50% - 200px);
+         left: calc(50% - 3px);
+
+         animation-duration: 60s;
+    }
+    #second>span{
+        display: inline-block;
+        width: 6px;
+        height: 220px;
+        background-color:rebeccapurple; 
+
+    }
+    #hour,#minute,#second{
+        animation-name: rotate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rotate{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg)
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <!--1.中心点-->
+    <section id="dot"></section>
+    <!--2.时针-->
+    <section id="hour">
+    <span></span>
+    </section>
+    <!--3.分针-->
+     <section id="minute">
+    <span></span>
+    </section>
+    <!--4.秒针-->
+     <section id="second">
+    <span></span>
+    </section>
+<!--script:脚本，添加JS（JavaScript）代码-->
+    <script>
+    // 1.获取当前时间
+    // var:varible 变量，声明变量名称关键字
+    // new：新， 创建； Date ()js 内置函数，用来获取当前时间。
+    var time = new Date();
+
+    // 2.从time中获取到时分秒。
+    var hour = time.getHours();//取值范围为0~23
+    var minute = time.getMinutes();
+    var second = time.getSeconds();
+// 在控制台打印输出
+    console.log(hour + ':' + minute + ':' + second);
+    
+    
+        //3. 把24小时制转换为12小时制
+    // if(hour > 12){
+    //     hour = hour - 12;
+    // }
+    // else{
+    //     hour = hour;
+    // }
+        // 三元运算符
+        // hour > 12, 判断条件；
+        // ？hour - 12， 表示条件成立，执行hour = hour - 12
+        // ： hour， 表示条件不成立，执行 hour= hour
+            
+        hour =  hour  > 12 ? hour - 12 : hour;
+     console.log (hour);
+ 
+    // 4.调整分秒针的角度
+    hour = -hour * 60 * 60 - minute * 60 - second;
+    minute = -minute * 60 - second;
+    second = - second;
+
+    // 在HTML文档中 获取id对应的section
+    // document:文档，这里指整个HTML文档。
+    var hourSection = document.getElementById('hour');
+    // 设置标签css样式中的animationDelay值
+    hourSection.style.animationDelay = hour + 's';
+    
+    var minuteSection = document.getElementById('minute');
+    minuteSection.style.animationDelay = minute + 's';
+
+    var secondSection = document.getElementById('second');
+    secondSection.style.animationDelay = second + 's';
+    
+    </script>
+
+
+
+    
+</body>
+</html>

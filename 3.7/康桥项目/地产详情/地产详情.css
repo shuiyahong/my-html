@@ -1,0 +1,146 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body,dl,dt,dd,p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eeeeee;
+      height: 1500px;
+}
+
+body>img {
+    width: 100%;
+    display: block;
+}
+
+main {
+    padding: 20px 10px 0px 10px;
+}
+
+.toolbar {
+    /*height: 44px;*/
+    overflow: hidden;
+
+}
+
+.toolbar>a {
+    border: 1px solid #33aa66;
+    color: #33aa66;
+    display: block;
+    /*padding: 11px 24px 11px 24px;*/
+    line-height: 41px;
+    padding: 0px 24px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.toolbar>a:first-child {
+    float: left;
+}
+
+.toolbar>a:last-child {
+    float: right;
+    background-color: #33aa66;
+    color: white;
+}
+
+.toolbar>a img {
+    width: 22px;
+    vertical-align: middle;
+}
+
+main section {
+    margin-top: 18px;
+    background-color: white;
+    color: #666;
+}
+
+section .top {
+    /*height: 44px;*/
+    border-bottom: 1px solid lightgray;
+    padding:0 16px;
+    line-height: 44px;
+}
+
+section .top img {
+    width: 22px;
+    vertical-align: middle;
+}
+
+section .top span {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+section .top span:nth-of-type(2) {
+    float: right;
+    color: #33aa66;
+}
+
+/*信息*/
+.info dl{
+   /*padding: */
+   font-size: 14px;
+   line-height: 160%;
+   padding: 16px;
+}
+.info dl dt{
+  float: left;
+}
+.info dl dd{
+  float: left;
+}
+.cf{
+  clear: both;
+}
+.info dl dd:last-of-type{
+   width: calc(100% - 102px);
+}
+
+/*地址*/
+.address div:last-child{
+   padding: 16px 16px 0px 16px;
+}
+
+.address div:last-child>img{
+   width: 100%;
+}
+.address div:last-child a{
+   display: block;
+   /*height: 40px;*/
+   line-height: 40px;
+   text-decoration: none;
+   color: #666;
+}
+.address div:last-child a img{
+   height: 20px;
+   vertical-align: middle;
+}
+.address div:last-child a span{
+  margin-left: 5px;
+}
+
+/*other*/
+.other>p{
+  padding: 16px;
+  border-bottom: 1px solid lightgray;
+}
+.other div:last-of-type{
+    text-align: center;
+    padding: 12px 0;
+}
+.other div:last-of-type img{
+     width: 28px;
+}
+
+footer{
+ text-align: center;
+ font-size: 14px;
+ line-height: 40px;
+ color: #666;
+}

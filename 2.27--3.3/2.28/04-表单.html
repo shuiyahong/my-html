@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!--form:表单，通过让用户填写，
+    或者是选择一些选项，从而收集用户信息.
+    action:动作。表单提交地址
+    -->
+    <form action="#">
+        <!--label:标签；-->
+        <!--for:用来说明label标签是为谁添加说明的
+        label for="username",指的是为id="username"的标签添加说明的。
+        当点击label 光标会自动锁定对应的输入框。-->
+        <label for="username">用户名：</label>
+        <!--input:输入；type：类型-->
+        <!--placeholder="输入用户名"占位内容，起到提示的作用-->
+        <!--required="required"输入框不能为空-->
+        <input type="text"placeholder="输入用户名"
+        id="username"name="username"required="required"><br/>
+
+        <label for="password">密码：</label>
+        <input type="text" id="password" value="哈哈"
+        required="required" ><br/>
+
+        <!--单选
+        注意：只有给每个选项添加相同的name属性，才能实现单选模式。
+        checked:说明这一项是默认项。
+        value:该选项的值
+        -->
+        请选择性别<br/>
+        <input type="radio"name="sex"checked value="male">男<br>
+        <input type="radio" name="sex"value="famale">女<br>
+        
+
+        <!--多选-->
+        请选择兴趣爱好：<br>
+        <input type="checkbox"> 美食<br>
+        <input type="checkbox"> 旅游<br>
+        <input type="checkbox"> 看电影<br>
+         <input type="checkbox"> 男朋友<br>
+        <input type="checkbox"> 看书<br>
+
+        <!--下拉列表-->
+        <!--select:选择  option：选项  selected:默认选择选项-->
+        你的出生年月：<br/>
+        <select name="birthday-year" id="year">
+            <option value="1996">1996</option>
+            <option value="1997"selected>1997</option>
+            <option value="1999">1999</option>
+            <option value="2008">2008</option>
+            <option value="2010">2010</option>
+        </select>
+
+        <!--多项分类-->
+        <br/>你的家乡在：<br/>
+        <select name="" id="">
+            <!--group:组-->
+           <optgroup label="河南">
+               <option value="">南阳</option>
+               <option value="">信阳</option>
+               <option value="">郑州</option>
+            </optgroup> 
+            <optgroup label="山西">
+                <option value="">太原</option>
+                <option value="">晋城</option>
+                <option value="">大同</option>
+            </optgroup>
+        </select>
+        <!--文本域-->
+        <!-- cols="30" 列 rows="10" 行-->
+        <br/>你的教育经历<br/>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+       
+       <!--区域设置：会添加边框-->
+       <fieldset>
+           <legend>请选择专业：</legend>
+           <input type="checkbox">h5<br/>
+           <input type="checkbox">java<br/>
+           <input type="checkbox">php<br/>
+       </fieldset>
+       
+       <!--提交和重置按钮-->
+       <!--通过value来自定义按钮标题-->
+       <input type="submit" value="提交">
+       <input type="reset" value="重新输入">
+
+       <!--button：普通按钮-->
+       <input type="button" value="登录">
+    </form>
+</body>
+</html>

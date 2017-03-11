@@ -1,0 +1,46 @@
+
+// 变量：定义一个变量，在样式中调用。
+@bg-color:pink;
+button{
+    background-color: @bg-color;
+}
+section{
+    width: 200px;
+    height: 200px;
+    border: 1px solid cornflowerblue;
+    background-color: @bg-color;
+    // 嵌套
+    p{
+        font-size: 24px;
+        color: lighten(tomato,10%);
+         
+    }
+    // &:指当前标签
+    &:hover{
+         background-color: paleturquoise;
+ }
+   &:active{
+        background-color: darkorchid;
+ }
+}
+// 混入（mixin）
+ .cornerRadius(@radius:5px){
+       border-radius: @radius;
+ }
+div{
+    width: 400px;
+    height: 400px;
+    background-color: @bg-color;
+     .cornerRadius(10px);
+    //  darken:暗度增大  lighten 减小
+    //  color: darken(red,10%);
+    
+}
+// 继承
+input{
+    color: khaki;
+}
+// input 在继承div的样式基础上又扩展了一个样式。
+input:extend(div){
+    font-size: 30px;
+}

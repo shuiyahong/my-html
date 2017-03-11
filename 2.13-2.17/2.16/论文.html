@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国科技论文在线</title>
+    <style>
+    /*html{
+        width: 1000px;
+    }*/
+    body{
+        background-color: grey;
+    }
+    section{
+        width: 1000px;
+        margin: 10px auto;
+        background-color: whitesmoke;
+    }
+   
+       
+     
+    strong{
+        margin-bottom: 0px;
+        margin-left: 0px;
+        position: absolute;
+            top: 20px;
+            left: 450px;
+        
+    }
+       
+        small{
+            position: relative;
+            top: 15px;
+            left:300px;
+        }
+         hr{
+            color:gray;
+            position: relative;
+        }
+        div{
+            /*text-align: center;*/
+            /*line-height: 10px;*/
+        }
+        #d{
+            text-align: center;
+            line-height: 10px;
+        }
+        .e{
+           font-size: 15px;
+        }
+        .m{
+        font-size: 12px;
+        color:blue;
+        }
+        h4{
+            padding-left: 0px;
+        }
+        main{
+            counter-reset:b -1;
+              counter-reset:a -1;
+
+        }
+        h3{
+            counter-increment:b;
+        }
+        h3::before{
+            content:counter(b)".";
+        }
+         
+        h5{
+            counter-increment:a;
+        }
+
+         h5::before{
+            content:counter(b)"."counter(a)".";
+        }
+        p{
+            text-indent: 2em;
+        }
+        
+    
+    
+    </style>
+</head>
+<body>
+    <section> 
+        <div id = "d">
+    <h2><strong><q style =" color: red">中国</q>科技论文在线</strong>
+    <small>http://www.paper.edu.cn</small></h2>
+    <hr>
+
+    <h1>AJAX在Web开发中的应用<sup><big>*</big></sup></h1>
+<span>荣国庆<sup>1<sup></span><span>,郭顺生<sup>2</sup></span>
+
+<p>1.武汉理工大学信息工程学院，湖北武汉 (430070)；</p>
+<p>1.武汉理工大学信息工程学院，湖北武汉 (430070)；</p>
+<span class = "e">E-mail：<span class="m">aqing50@yahoo.com.cn</span></span>
+</div>
+<p><b >摘要:</b>AJAX 是一种新兴的 Web 表示层技术，利用它可以构建动态、快速、灵活的 Web 应用程序。
+    通过对 AJAX 的相关技术、工作原理以及具体应用的介绍，阐明了 AJAX 在 Web 应用方
+    面具有独特的优势，必将成为 Web 开发的主流技术。</p>
+
+    <p><b>关键词：</b>AJAX；Web 开发；异步通信</p>
+
+      <b>中图法分类号：TP311	文献标识码：A</b>
+    <main>
+    <h3> 引言:</h3><br>
+    <p>近年来，随着 Internet 的迅速发展，Web 应用呈现快速增长的态势。传统的基于B/S(Browser/Server)模式的
+ Web 应用采用的是同步交互方式。当网络负载较小时，这种方式工作得很好；可是当网络负载较大而 ISP 接入带
+ 宽较窄时，就会出现响应时间很长、浏览器一直处于等待状态等现象，甚至有可能由于响应超时而造成页面的不可用。
+
+针对以上问题，Adaptive Path 公司的 Jesse James Garrett 于 2005 年 2 月提出了 AJAX 的
+
+概念。在 AJAX 的帮助下，传统 Web 应用中的请求/响应模式发生了改变，开发人员可以利用这一技术实现与服务器端
+的异步交互，从而提高了 Web 应用的执行效率。</p>
+
+<h3>AJAX 技术简介</h3><br>
+<p>AJAX 是 Asynchronous JavaScript and XML 的缩写，即异步 JavaScript 和 XML[1]。它并不是一项单独的技术，
+而是由 XHTML 和 CSS、DOM、XML 和 XSTL、XMLHttpRequest、
+
+JavaScript 等若干项技术按照一定的方式组合在一起，在相互协作中发挥出更加强大的作用：使用 XHTML 和 CSS 
+标准化呈现页面；使用 DOM 实现动态显示和交互；使用 XML 和 XSTL 进行数据交换和处理；使用 XMLHttpRequest
+ 进行异步数据查询、检索；使用 JavaScript 将以上各项技术综合起来，绑定和处理相关数据。
+
+AJAX 技术的核心是 JavaScript 对象 XMLHttpRequest。Web 开发人员可以利用该对象
+
+在不刷新整个页面的前提下，向服务器端发送请求；服务器端对客户端发来的请求进行处理后，将响应发送给客户端；
+客户端再次利用 XMLHttpRequest 对象接受服务端的响应，并利用 DOM 将结果显示给用户。
+</p>
+
+
+<b> 传统 Web 应用与基于 AJAX 的 Web 应用之间的比较</b><br>
+<h5>传统 Web 应用</h5><br>
+<p>在传统的 Web 应用中，客户端与服务器端采用同步交互的方式，如图 1 所示。用户通过客户端向服务器端发送一个 HTTP
+ 请求，服务器端的 Web 服务器在接受到该请求后，调用业务逻辑访问数据库，并将结果重新组成 HTML 页面发送回客户端进行显示。
+ 在显示该页面时，往往使用 CSS 层叠样式表来丰富页面的显示效果。<br/>
+<center><img src="2.png" alt="" style= "width: 400px; height:300px"></center><br/><br/>
+
+ 显然，这样的一种处理方式一定会给用户一种不连贯的体验。因为当前服务器在处理请求的时候，用户多数时间只能处于等待状态，
+ 页面中显示的内容也只能是一片空白[2]。哪怕只是一次很小的交互、只需要从服务器端得到一个很简单的数据,都要返回一个完整的 
+ HTML 页,而用户每次都要浪费时间和带宽去重新读取整个页面。
+</p>
+<h5>基于 AJAX 的 Web 应用</h5><br>
+<p>   
+与传统的 Web 应用不同，基于 AJAX 的 Web 应用在客户端和服务器之间添加了—个中间层——AJAX 引擎，使用户操作与服务器响应异
+步化，从而消除了传统 Web 应用中响应慢的缺点，如图 2 所示。
+
+<center> <img src="3.png" alt=""></center><br>
+
+
+
+在会话刚开始的时候，浏览器首先装载的不是一个页面，而是一个用 JavaScript 编写的 AJAX 引擎。这个引擎代表用户与服务器进行
+通信，并更新用户所看到的界面。整个通信过程是在后台异步进行的，并不打断用户当前的操作，这对用户来讲是一种连贯的体验。
+
+另外，由于 AJAX 只与服务器端进行数据层面的交换，而—些页面显示、校验数据等功能则交给 AJAX 引擎自己来做。AJAX 将一些服务
+器端的工作转移到客户端，充分利用了客户端闲置的处理能力，从而减轻了服务器的负担，加快了浏览器的响应速度，缩短了用户等待时间。
+</p>
+ 
+ <h5>在 Web 开发中使用 AJAX</h5><br/>
+<p>随着 AJAX 技术的不断发展和日趋成熟，一些简化 AJAX 开发的框架相继问世，这为在 Web 开发中使用 AJAX 提供了便利[3]。在众多 
+AJAX 框架中，比较成熟的是 Prototype.js，它将底层的 AJAX 逻辑封装在 AJAX 对象中，Web 开发人员只需关注 AJAX 对象所提供的
+一系列 AJAX 逻辑类，而不必关注 AJAX 的底层代码，从而极大地提高了 AJAX 的开发效率。
+
+在 Prototype.js 所提供的众多 AJAX 逻辑类中，最常用的是 Ajax.Updater 类。在实例化
+Ajax.Updater 类的时候，只需要向其构造函数传递三个参数：请求页面的 URL 地址
+request_url、请求参数 request_pars 和一个页面元素的 ID，即可向服务器发送一次 AJAX 请
+求。向 Ajax.Updater 类提供一个页面元素的 ID 以后，Ajax.Updater 类就会将服务器端返回的数据填充到该页面元素中。代码如下：</p>
+
+
+
+<h3>开发实例</h3><br>
+<p>
+    我们以三级联动菜单为例，介绍 AJAX 技术的应用。
+    在传统 Web 开发中，页面一次性将三级联动菜单的所有数据全部读取出来并写入数组，然后由 JavaScript 根据用户对上级菜单的操作来
+控制下级菜单的呈现。如果用户不对菜单进行操作或者只对菜单中的一部分进行操作的话，那读取的数据中的一部分就会成为冗余数据，从而
+浪费带宽、加重服务器负担，特别是在菜单结构复杂、数据量大的情况下，这种弊端会更为突出。
+在 Web 开发中应用 AJAX 技术以后，上述问题就会有所改观。
+
+   在初始化页面的时候，只读取第一级菜单的所有数据并显示（注：在实际 Web 开发中，三级联动菜单的数据都是从数据库中读取，这里为了叙
+述方便省略了数据库查询代码）：
+
+
+
+当用户操作一级菜单其中一项时，就会调用 Get_Sup_Category 函数，该函数通过 AJAX 向服务器请求当前一级项目所对应的二级子菜单的所有数据，
+并使用 Ajax.Request 类将结果<br/>
+
+<center><img src="1.png" alt=""></center><br/>
+
+
+同理，AJAX 根据用户对二级菜单的操作，将当前二级项目所对应的三级子菜单的所有数据填充到 ID 为 Sub_Category 的 DIV 中。
+可见， AJAX 完全根据用户的需要来读取数据，不仅减轻了服务器负担，把对资源的浪费降到最低，而且缩短了用户等待时间，提高了用户体验。
+
+本文列举的开发实例已经在美国著名电子商务网站 MadeBig 的系统开发中得到了广泛应用，如图 3 所示：
+</p>
+
+<h3>结语</h3><br>
+<p>
+    目前，越来越多的大型网站开始采用 AJAX 技术。继 Google 的 Orkut、Gmail、Google Maps 等服务中大量采用 AJAX 技术之后，微软的 
+MSN Space 和 Windows Live、百度的百度空间和地图搜索、网易的邮箱和博客服务等都给了 AJAX 充分的表现空间。随着 Web 应用的不断
+发展，AJAX 技术将会得到更加广泛的发展。
+</p>
+
+<h3>参考文献:</h3>
+
+<p>[1]JESSE JAMES GARRETT. Ajax: A new approach to web applications [EB/OL].</><br>
+    <p  style = "color:blue ;font-size:16px">http://adaptivepath.com/publica
+        tions/essays/archives/000385.php，</small>2005-2-18.</p><br>
+
+[2]张桂元，贾燕凤，姜波. 征服 Ajax——Web2.0 快速入门与项目实践（Java）[M].人民邮电出版社，2006.<br>
+
+[3]DAVE CRANE,ERIC PASCARELLO,DARREN JAMES. AJAX in action[M].Manning Publications，2006.<br>
+
+
+作者简介：戎国庆（1981-），男，河北省石家庄人，硕士，主要研究方向：信息系统理论与技术；郭顺生（1963-），男，湖北省武汉人，教授，
+博士生导师，主要研究方向：CAD/CAM/PDM/ERP 基础理论及应用。
+</p>
+The Application of AJAX in Web Development
+
+Rong Guoqing1, Guo Shunsheng2
+
+(1.The School of Information Engineering, Wuhan University of Technology, Wuhan 430070,
+
+China;
+
+2.Hubei Digital manufacturing Key Laboratory, Wuhan 430070, China）
+
+Abstract
+
+AJAX is a new Web presentation technology, which can be used to build dynamic, quick and flexible Web application program. Through introducing the related technologies, the principle and the application of the AJAX, this paper elaborated AJAX has unique advantages and must be the leading technology in Web application.
+
+Keywords: AJAX; web development; asynchronous communication
+
+</main>
+</section> 
+</body>
+</html>

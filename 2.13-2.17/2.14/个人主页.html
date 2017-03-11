@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+<style>
+/*选择器，选择器……这种形式我们并成为：并集选择器。*/
+body,p,h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+}   
+
+.a{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    /*background-color: plum;*/
+    border-bottom: 1px  solid palegoldenrod;
+    z-index: 1;
+/*
+给盒子加阴影？
+(1)x-offset:阴影水平偏移量， 正值往右偏。
+（2）y-offset： 阴影垂直偏移量， 正值往下偏
+（3）阴影的模糊半径：值越大边缘越模糊
+（4）阴影的扩展半径：值越大向外扩展越大
+（5）阴影颜色
+  
+如何给文字加阴影？
+
+*/
+    box-shadow: 1px 1px 1px 1px grey;
+    background-color: lightcoral;
+
+}
+.b{
+    width: 1000px;
+    /*height: 80px;*/
+    /*background-color: lemonchiffon;*/
+    margin: 0px auto;
+    padding: 20px 0px;
+    position: relative;
+    /*为了让   <span class = "item">相对于b进行定位*/
+}
+.a .b #t{
+        height: 40px;
+          display: block;
+
+}
+.b .item{
+    position: absolute;
+    right: 0px;
+/* line-height: 50px;行高*/
+    line-height: 50px;
+    top: 20px;
+
+}
+.b a{
+    margin-left: 20px;
+    color: darkviolet;
+    text-decoration: none;
+  
+}
+#header{
+    margin-top: 81px;
+    width: 100%;
+}
+main{
+    /*定宽居中*/
+    width: 1000px;
+    margin: 0px auto;
+    /*background-color: yellowgreen;*/
+    margin-top: 30px;
+    font-size: 20px;
+}
+p{
+   color:black;
+   line-height: 25px;
+ 
+}
+/*伪元素选择器 before ………………   之前*/
+p::before{
+    /*content,前缀内容*/
+    content:"“";
+    font-size: 20px;
+
+}
+p::after{
+    /*c,前缀内容*/
+    content:"”";
+    font-size: 20px;
+    /*after：......之后*/
+
+}
+section{
+    margin-top: 30px;
+}
+h2{
+    /*border-left:30px solid orangered;*/
+    color:orangered;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.pic{
+    width: 100%;
+     margin-bottom: 20px;
+}
+section .bg{
+    background-image: url(classmates.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    height: 600px;
+
+}
+.bg img{
+       position: absolute;
+        border-radius: 80%;
+       
+}
+.bg #classmate1{
+    width: 150px;
+   
+    
+    top:200px;
+    left: 150px;
+
+    
+}
+.bg #classmate2{
+    width: 200px;
+    top:300px;
+    left: 350px;
+   
+}
+.bg #classmate3{
+    width: 180px;
+    top:400px;
+    left: 550px;
+  
+}
+#copy{
+    text-align:center;
+    margin-bottom: 15px;
+}
+#copy::before{
+        content:"";
+}
+#copy::after{                                                
+        content:"";
+}
+hr{
+    border:none;
+    height: 1px;
+    background-color: gray;
+    margin-top: 20px;
+}
+
+</style>
+
+</head>
+<body>
+    <div class = "a">
+    <div class = "b">
+        <img src="logo.png" alt="logo" id = "t">
+        <span class = "item">
+            <a href="#">首页</a>
+            <a href="#html5">html5</a>
+            <a href="#home">我的家乡</a>
+            <a href="#school">我的大学</a>
+            <a href="#mate">我的同学</a>
+            <a href="#me">关于我</a>
+        </span>
+    </div>
+    </div>
+    <!--横幅-->
+    <img src="header.jpg" alt="" id= "header">
+    <!--页面主要内容-->
+    <main>
+   <p>
+    幸福，就是当激情退去容颜衰老，牵你的还是那双不怨悔的手；
+    就是当财富散尽一无所有，陪你的还是那颗不回头的心；
+    就是当灾难降临众生远离，暖你的还是那份不冷却的情。
+    幸福很简单，<span id="html5"></span>就是找一个温暖的人共同燃烧此生，
+    奢侈、富贵、炫耀只是一层包装，只要你觉得是幸福的，
+    其它一切都无所谓。
+    
+    
+    </p>
+    <!--section区域 部分 -->
+ <section >
+     <h2> &#9646;html5</h2>
+     <img src="html5.jpg" alt="" class="pic">
+     <p>
+         遇到爱你的人，学会感恩。遇到你爱的人，学会付出；
+    遇到你恨的人，学会原谅。遇到恨你的人，学会道歉；
+    遇到欣赏你的人，学会笑纳<span<span id="home"></span>></span>。遇到你欣赏的人，学会赞美；
+    遇到嫉妒你的人，学会低调。遇到你嫉妒的人，学会宽容；
+    遇到不懂你的人，学会沟通。遇到你不懂的人，学会好奇。
+    </p>
+ </section>
+
+  <section id = "home">
+     <h2> &#9646;我的家乡</h2>
+     <img src="hometown.jpg" alt="" class="pic">
+     <p>
+         遇到爱你的人，学会感恩。遇到你爱的人，学会付出；
+    遇到你恨的人，学会原谅。遇到恨你的人，学会道歉；
+    遇到欣赏你的人，学会笑纳。<span id="school"></span>遇到你欣赏的人，学会赞美；
+    遇到嫉妒你的人，学会低调。遇到你嫉妒的人，学会宽容；
+    遇到不懂你的人，学会沟通。遇到你不懂的人，学会好奇。
+    </p>
+ </section>
+
+
+  <section id = "school">
+     <h2> &#9646;我的大学</h2>
+     <img src="lzu.jpg" alt="" class="pic">
+     <p>
+         遇到爱你的人，学会感恩。遇到你爱的人，学会付出；
+    遇到你恨的人，学会原谅。遇到恨你的人，学会道歉；
+    遇到欣赏你的人，学会笑纳。<span id="mate"></span>遇到你欣赏的人，学会赞美；
+    遇到嫉妒你的人，学会低调。遇到你嫉妒的人，学会宽容；
+    遇到不懂你的人，学会沟通。遇到你不懂的人，学会好奇。
+    </p>
+ </section>
+
+
+  <section id = "mate">
+     <h2> &#9646;我的同学</h2>
+     <div class="bg">
+         <img src="lry.jpg" alt="" id = "classmate1">
+         <img src="wf.png" alt="" id = "classmate2">
+         <img src="ldh.jpg" alt=""id = "classmate3">
+     </div>
+     <!--<img src="classmates.jpg" alt="" class="pic">-->
+     <p>
+         遇到爱你的人，学会感恩。遇到你爱的人，学会付出；
+    遇到你恨的人，学会原谅。遇到恨你的人，学会道歉；
+    遇到欣赏你的人，学会笑纳。<span id="me"></span>遇到你欣赏的人，学会赞美；
+    遇到嫉妒你的人，学会低调。遇到你嫉妒的人，学会宽容；
+    遇到不懂你的人，学会沟通。遇到你不懂的人，学会好奇。
+    </p>
+    </section>
+
+
+  <section id = "me">
+     <h2> &#9646;关于我</h2>
+     <img src="homepage.jpg" alt="" class="pic">
+     <p>
+         遇到爱你的人，学会感恩。遇到你爱的人，学会付出；
+    遇到你恨的人，学会原谅。遇到恨你的人，学会道歉；
+    遇到欣赏你的人，学会笑纳。遇到你欣赏的人，学会赞美；
+    遇到嫉妒你的人，学会低调。遇到你嫉妒的人，学会宽容；
+    遇到不懂你的人，学会沟通。遇到你不懂的人，学会好奇。
+    </p>
+ </section>
+ <!--水平线-->
+ <hr/>
+ <!--换标签 去掉前后缀-->
+ <!--<span id = "copy">&copy; 智游教育 &nbsp;&nbsp;&nbsp;2017&nbsp;&nbsp;&nbsp;一大街&nbsp;&nbsp;&nbsp;110   </span>-->
+    
+    <p id = "copy">&copy; 智游教育 &nbsp;&nbsp;&nbsp;2017&nbsp;&nbsp;&nbsp;一大街&nbsp;&nbsp;&nbsp;110   </p></main>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走动的钟表</title>
+    <style>
+    html{
+        height:100%;
+    }
+    body{
+        height:100%;
+        margin:20px;
+        background-color: blue;
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+    }
+        #time{
+                /*设置文本颜色*/
+                color: yellow;
+                /*设置文本的字体大小*/
+                font-size: 100px;
+            }
+        #date{
+                color: white;
+                font-size: 30px; 
+            }
+        </style>
+    </head>
+    <body>
+        <!--时间-->
+        <div id="time"></div>
+        <div id="date"></div>
+        <!--引入外部js文件-->
+        <script src="clock.js"></script>
+    
+</body>
+</html>

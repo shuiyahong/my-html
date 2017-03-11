@@ -1,0 +1,8 @@
+命令性命令
+
+1.ipconfig 获取IP命令
+2.d 切换到D盘
+3.cd 切换文件路径
+4.node -v 获取node版本
+5.npm install -g less  安装less
+6.lessc text.less text.css  文件转换

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器的优选级（3）</title>
+<style>
+box1{
+    color: tan;
+}
+.box2{
+    color: palevioletred;
+}
+.box1 #ya{
+     font-size: 20px;
+}
+.box1 .box3{
+    font-size: 50px;
+}
+.box2 #content{
+    text-align: center;
+}
+.box3{
+    text-align: right;
+}
+
+/*
+结论：如果多个选择器都没有直接定位到某个元素
+（1.通过css的某些属性具有继承性，给元素加样式）
+首先先比较，那个选择器 定位距离目标元素最近（就近原则）
+距离近的样式优先级更高
+如果距离相等，然后再比较权重值，这时，权重大的优先级更高。
+*/
+
+/*
+那些样式具有继承性？
+color font-xxxx, text-xxxx, line-xxxx,
+*/
+</style>
+
+</head>
+<body>
+    <div class="box1">
+        <div class="box2" id="ya">
+            <div class="box3" id="content">
+                <P>优先级问题</P>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
